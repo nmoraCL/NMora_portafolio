@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Senior UX/UI Designer — Crafting intuitive digital experiences that drive measurable business outcomes.">
+  <meta name="author" content="Nicolás Mora">
+  <meta name="theme-color" content="#0a0a0b">
+  <title>Nicolás Mora — Senior UX/UI Designer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============ NAVIGATION ============ -->
+  <nav class="navbar navbar-expand-lg fixed-top nav-blur" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand brand-mark" href="#">NM<span class="accent-dot">.</span></a>
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="#about" data-i18n="nav.about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills" data-i18n="nav.skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#case-studies" data-i18n="nav.caseStudies">Case Studies</a></li>
+          <li class="nav-item"><a class="nav-link" href="#process" data-i18n="nav.process">Process</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience" data-i18n="nav.experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+        <a href="#contact" class="btn btn-accent ms-lg-4 d-none d-lg-inline-flex" data-i18n="nav.cta">Let's Talk</a>
+        <div class="lang-switcher" role="group" aria-label="Language selector">
+          <button class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+          <button class="lang-btn" data-lang="es" aria-pressed="false">ES</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero-section" id="hero">
+    <div class="container">
+      <div class="row min-vh-100 align-items-center">
+        <div class="col-lg-10 col-xl-9">
+          <div class="hero-availability fade-in">
+            <span class="availability-dot" aria-hidden="true"></span>
+            <span data-i18n="hero.availability">Based in Chile &middot; Available for Remote &amp; Global Projects</span>
+          </div>
+          <div class="hero-overline fade-in" style="animation-delay:.05s" data-i18n="hero.overline">Senior UX/UI Designer</div>
+          <h1 class="hero-title fade-in" style="animation-delay:.1s" data-i18n="hero.title" data-i18n-html="true">
+            I design digital products<br class="d-none d-md-block">
+            that people <em>actually</em> love<br class="d-none d-md-block">
+            to use.
+          </h1>
+          <p class="hero-sub fade-in" style="animation-delay:.2s" data-i18n="hero.sub" data-i18n-html="true">
+            Turning complex problems into elegant, intuitive experiences.<br class="d-none d-md-block">
+            10+ years helping startups and enterprises ship products that<br class="d-none d-md-block">
+            drive engagement, conversion, and lasting business impact.
+          </p>
+          <div class="hero-ctas fade-in" style="animation-delay:.3s">
+            <a href="#case-studies" class="btn btn-accent btn-lg" data-i18n="hero.cta1">View Case Studies</a>
+            <a href="#contact" class="btn btn-outline-light btn-lg" data-i18n="hero.cta2">Get in Touch</a>
+          </div>
+          <div class="hero-stats fade-in" style="animation-delay:.4s">
+            <div class="stat-item">
+              <span class="stat-number">10+</span>
+              <span class="stat-label" data-i18n="hero.stat1">Years Experience</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">50+</span>
+              <span class="stat-label" data-i18n="hero.stat2">Projects Shipped</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">30+</span>
+              <span class="stat-label" data-i18n="hero.stat3">Clients Worldwide</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-gradient" aria-hidden="true"></div>
+  </header>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section-padding" id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-5 mb-lg-0">
+          <span class="section-label scroll-reveal" data-i18n="about.label">About</span>
+          <h2 class="section-title scroll-reveal" data-i18n="about.title" data-i18n-html="true">Design is<br>how it <em>works</em>.</h2>
+        </div>
+        <div class="col-lg-7 offset-lg-1">
+          <div class="about-content scroll-reveal">
+            <p class="lead-text" data-i18n="about.lead">
+              I don't just push pixels — I solve problems. Every interface I design starts with understanding the people who will use it and the business outcomes it needs to deliver.
+            </p>
+            <p class="body-text" data-i18n="about.p1">
+              Over the past decade, I've worked across fintech, SaaS, healthcare, and e-commerce — collaborating with product managers, engineers, and stakeholders to ship experiences that move metrics. My approach bridges user empathy with business strategy: I dig into research, challenge assumptions, and design systems that scale.
+            </p>
+            <p class="body-text" data-i18n="about.p2">
+              I believe the best design is invisible. It reduces friction, builds trust, and makes complex workflows feel effortless. Whether I'm redesigning a checkout flow or architecting a design system from scratch, I focus on clarity, consistency, and measurable impact.
+            </p>
+          </div>
+          <div class="about-values scroll-reveal">
+            <div class="value-item">
+              <h3 class="value-title" data-i18n="about.v1Title">User-Centered</h3>
+              <p class="value-desc" data-i18n="about.v1Desc">Every decision is grounded in research, testing, and real user behavior — not assumptions.</p>
+            </div>
+            <div class="value-item">
+              <h3 class="value-title" data-i18n="about.v2Title">Business-Aware</h3>
+              <p class="value-desc" data-i18n="about.v2Desc">Good design delivers results. I tie every design decision to KPIs, conversion, and growth.</p>
+            </div>
+            <div class="value-item">
+              <h3 class="value-title" data-i18n="about.v3Title">Systems Thinker</h3>
+              <p class="value-desc" data-i18n="about.v3Desc">I build scalable design systems and component libraries that maintain consistency at scale.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="section-padding surface-alt" id="skills">
+    <div class="container">
+      <div class="text-center mb-5 pb-3">
+        <span class="section-label scroll-reveal" data-i18n="skills.label">Expertise</span>
+        <h2 class="section-title scroll-reveal" data-i18n="skills.title">Skills & Capabilities</h2>
+        <p class="section-desc scroll-reveal" data-i18n="skills.desc">A comprehensive toolkit built over 10+ years of designing digital products.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- UX Design -->
+        <div class="col-md-6 col-xl-3 scroll-reveal">
+          <div class="skill-card">
+            <div class="skill-icon"><i class="bi bi-compass"></i></div>
+            <h3 class="skill-card-title" data-i18n="skills.uxTitle">UX Design</h3>
+            <ul class="skill-list">
+              <li>User Research</li>
+              <li>Information Architecture</li>
+              <li>User Flows</li>
+              <li>Wireframing</li>
+              <li>Usability Testing</li>
+              <li>Accessibility</li>
+              <li>Design Thinking</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- UI Design -->
+        <div class="col-md-6 col-xl-3 scroll-reveal" style="animation-delay:.1s">
+          <div class="skill-card">
+            <div class="skill-icon"><i class="bi bi-palette"></i></div>
+            <h3 class="skill-card-title" data-i18n="skills.uiTitle">UI Design</h3>
+            <ul class="skill-list">
+              <li>Visual Design</li>
+              <li>Responsive Design</li>
+              <li>Design Systems</li>
+              <li>Interaction Design</li>
+              <li>Prototyping</li>
+              <li>Motion Design</li>
+              <li>Brand Identity</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Product & Business -->
+        <div class="col-md-6 col-xl-3 scroll-reveal" style="animation-delay:.2s">
+          <div class="skill-card">
+            <div class="skill-icon"><i class="bi bi-graph-up-arrow"></i></div>
+            <h3 class="skill-card-title" data-i18n="skills.prodTitle">Product & Strategy</h3>
+            <ul class="skill-list">
+              <li>Conversion Optimization</li>
+              <li>Stakeholder Management</li>
+              <li>Product Discovery</li>
+              <li>KPI-driven Design</li>
+              <li>Data-informed Decisions</li>
+              <li>A/B Testing</li>
+              <li>Design Strategy</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="col-md-6 col-xl-3 scroll-reveal" style="animation-delay:.3s">
+          <div class="skill-card">
+            <div class="skill-icon"><i class="bi bi-tools"></i></div>
+            <h3 class="skill-card-title" data-i18n="skills.toolsTitle">Tools</h3>
+            <ul class="skill-list">
+              <li>Figma</li>
+              <li>FigJam</li>
+              <li>Miro</li>
+              <li>Adobe Creative Suite</li>
+              <li>Analytics Platforms</li>
+              <li>Notion / Jira</li>
+              <li>AI Design Tools</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CASE STUDIES ============ -->
+  <section class="section-padding" id="case-studies">
+    <div class="container">
+      <div class="text-center mb-5 pb-4">
+        <span class="section-label scroll-reveal" data-i18n="cs.label">Selected Work</span>
+        <h2 class="section-title scroll-reveal" data-i18n="cs.title">Featured Case Studies</h2>
+        <p class="section-desc scroll-reveal" data-i18n="cs.desc">Deep dives into projects where design drove measurable business outcomes.</p>
+      </div>
+
+      <!-- ===== Case Study 1 ===== -->
+      <article class="case-study scroll-reveal" id="cs-finflow">
+        <div class="case-study-header">
+          <div class="row align-items-end">
+            <div class="col-lg-8">
+              <span class="case-label" data-i18n="cs1.label">Case Study 01</span>
+              <h3 class="case-title" data-i18n="cs1.title">FinFlow — Redesigning the Future of Business Banking</h3>
+              <p class="case-excerpt" data-i18n="cs1.excerpt">A complete UX overhaul of a B2B fintech platform that increased user activation by 47% and reduced onboarding drop-off by 62%.</p>
+            </div>
+            <div class="col-lg-4">
+              <div class="case-meta">
+                <div class="meta-item"><span class="meta-label" data-i18n="cs.metaRole">Role</span><span class="meta-value" data-i18n="cs1.role">Lead UX/UI Designer</span></div>
+                <div class="meta-item"><span class="meta-label" data-i18n="cs.metaTimeline">Timeline</span><span class="meta-value" data-i18n="cs1.timeline">6 months</span></div>
+                <div class="meta-item"><span class="meta-label" data-i18n="cs.metaTeam">Team</span><span class="meta-value" data-i18n="cs1.team">2 Designers, 4 Engineers, 1 PM</span></div>
+                <div class="meta-item"><span class="meta-label" data-i18n="cs.metaIndustry">Industry</span><span class="meta-value" data-i18n="cs1.industry">Fintech / B2B SaaS</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-visual">
+          <div class="case-visual-placeholder">
+            <div class="placeholder-inner">
+              <i class="bi bi-bank2"></i>
+              <span>FinFlow Dashboard — Final Design</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-body">
+          <div class="row">
+            <div class="col-lg-4 mb-4 mb-lg-0">
+              <h4 class="case-section-title" data-i18n="cs.challenge">The Challenge</h4>
+            </div>
+            <div class="col-lg-8">
+              <p data-i18n="cs1.challengeP1">FinFlow's legacy platform suffered from a convoluted onboarding flow and a dashboard built by engineers without UX oversight. 68% of trial users abandoned during setup, and the average time-to-value was 14 days — far too long for a competitive fintech market.</p>
+              <p data-i18n="cs1.challengeP2">The company needed a ground-up redesign that would reduce friction, accelerate activation, and position them against emerging competitors like Mercury and Brex.</p>
+            </div>
+          </div>
+
+          <hr class="case-divider">
+
+          <div class="row">
+            <div class="col-lg-4 mb-4 mb-lg-0">
+              <h4 class="case-section-title" data-i18n="cs.goals">Goals</h4>
+            </div>
+            <div class="col-lg-8">
+              <div class="row g-4">
+                <div class="col-sm-6">
+                  <h5 class="goal-label">User Goals</h5>
+                  <ul class="goal-list">
+                    <li>Get set up in under 10 minutes</li>
+                    <li>Understand the dashboard at a glance</li>
+                    <li>Complete key tasks without training</li>
+                    <li>Feel confident managing business finances</li>
+                  </ul>
+                </div>
+                <div class="col-sm-6">
+                  <h5 class="goal-label">Business Goals</h5>
+                  <ul class="goal-list">
+                    <li>Increase trial-to-paid conversion by 30%</li>
+                    <li>Reduce onboarding drop-off by 50%</li>
+                    <li>Cut support tickets by 40%</li>
+                    <li>Establish premium market positioning</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr class="case-divider">
+
+          <div class="row">
+            <div class="col-lg-4 mb-4 mb-lg-0">
+              <h4 class="case-section-title">Process</h4>
+            </div>
+            <div class="col-lg-8">
+              <div class="process-steps-inline">
+                <div class="process-step-item">
+                  <span class="step-num">01</span>
+                  <h5>Research & Discovery</h5>
+                  <p>Conducted 24 user interviews, analyzed 3 months of analytics data, and mapped the existing user journey to identify pain points. Created empathy maps and personas for 3 primary user segments.</p>
+                </div>
+                <div class="process-step-item">
+                  <span class="step-num">02</span>
+                  <h5>Competitive Benchmarking</h5>
+                  <p>Audited 8 competitors across fintech and SaaS. Mapped feature parity, onboarding patterns, and dashboard information architecture to identify differentiation opportunities.</p>
+                </div>
+                <div class="process-step-item">
+                  <span class="step-num">03</span>
+                  <h5>Information Architecture</h5>
+                  <p>Restructured the navigation from 32 items to 8 primary categories. Ran card sorting sessions with 15 users to validate the new taxonomy and hierarchy.</p>
+                </div>
+                <div class="process-step-item">
+                  <span class="step-num">04</span>
+                  <h5>Wireframing & Prototyping</h5>
+                  <p>Created low-fidelity wireframes for 40+ screens, iterated through 3 rounds of internal feedback, and built a clickable prototype in Figma for usability testing.</p>
+                </div>
+                <div class="process-step-item">
+                  <span class="step-num">05</span>
+                  <h5>Usability Testing</h5>
+                  <p>Ran moderated testing with 12 participants across 2 rounds. Achieved a 92% task completion rate on the revised onboarding flow — up from 38% on the legacy product.</p>
+                </div>
+                <div class="process-step-item">
+                  <span class="step-num">06</span>
+                  <h5>Visual Design & Handoff</h5>
+                  <p>Designed the final UI with a comprehensive design system: 120+ components, 8 color tokens, and responsive specs for 4 breakpoints. Delivered dev-ready assets via Figma with detailed annotations.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr class="case-divider">
+
+          <div class="row">
+            <div class="col-lg-4 mb-4 mb-lg-0">
+              <h4 class="case-section-title">Results</h4>
+            </div>
+            <div class="col-lg-8">
+              <div class="results-grid">
+                <div class="result-card">
+                  <span class="result-number">+47%</span>
+                  <span class="result-desc">User Activation Rate</span>
+                </div>
+                <div class="result-card">
+                  <span class="result-number">-62%</span>
+                  <span class="result-desc">Onboarding Drop-off</span>
+                </div>
+                <div class="result-card">
+                  <span class="result-number">-45%</span>
+                  <span class="result-desc">Support Tickets</span>
+                </div>
+                <div class="result-card">
+                  <span class="result-number">3.2 min</span>
+                  <span class="result-desc">Avg. Time to Value</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr class="case-divider">
+
+          <div class="row">
+            <div class="col-lg-4 mb-4 mb-lg-0">
+              <h4 class="case-section-title">Key Learnings</h4>
+            </div>
+            <div class="col-lg-8">
+              <p data-i18n="cs1.learnings">The biggest win wasn't the visual redesign — it was simplifying the information architecture. Removing 75% of navigation items and introducing progressive disclosure transformed a product that felt overwhelming into one that felt intuitive. The lesson: when in doubt, subtract.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ===== Case Study 2 ===== -->
+      <article class="case-study scroll-reveal" id="cs-healwise">
+        <div class="case-study-header">
+          <div class="row align-items-end">
+            <div class="col-lg-8">
+              <span class="case-label" data-i18n="cs2.label">Case Study 02</span>
+              <h3 class="case-title" data-i18n="cs2.title">HealWise — Reimagining Telehealth for Accessibility</h3>
+              <p class="case-excerpt" data-i18n="cs2.excerpt">Designed an accessible telehealth platform that achieved WCAG 2.1 AA compliance and increased appointment completion rates by 35% among users 65+.</p>
+            </div>
+            <div class="col-lg-4">
+              <div class="case-meta">
+                <div class="meta-item"><span class="meta-label" data-i18n="cs.metaRole">Role</span><span class="meta-value" data-i18n="cs2.role">Senior UX Designer</span></div>
+                <div class="meta-item"><span class="meta-label" data-i18n="cs.metaTimeline">Timeline</span><span class="meta-value" data-i18n="cs2.timeline">4 months</span></div>
+                <div class="meta-item"><span class="meta-label" data-i18n="cs.metaTeam">Team</span><span class="meta-value" data-i18n="cs2.team">1 Designer, 3 Engineers, 1 PM, 1 Researcher</span></div>
+                <div class="meta-item"><span class="meta-label" data-i18n="cs.metaIndustry">Industry</span><span class="meta-value" data-i18n="cs2.industry">Healthcare / Telehealth</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-visual">
+          <div class="case-visual-placeholder">
+            <div class="placeholder-inner">
+              <i class="bi bi-heart-pulse"></i>
+              <span>HealWise — Patient Dashboard</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-body">
+          <div class="row">
+            <div class="col-lg-4 mb-4 mb-lg-0">
+              <h4 class="case-section-title" data-i18n="cs.challenge">The Challenge</h4>
+            </div>
+            <div class="col-lg-8">
+              <p data-i18n="cs2.challengeP1">HealWise's existing telehealth app was failing its most critical demographic: elderly and less tech-savvy patients. The appointment booking flow had a 52% abandonment rate among users over 65, and the video consultation interface generated constant support calls due to confusing controls.</p>
+              <p data-i18n="cs2.challengeP2">Accessibility was not an afterthought — it was the core design constraint. The platform needed to serve patients with low vision, motor impairments, and limited digital literacy without compromising the experience for other users.</p>
+            </div>
+          </div>
+
+          <hr class="case-divider">
+
+          <div class="row">
+            <div class="col-lg-4 mb-4 mb-lg-0">
+              <h4 class="case-section-title">Goals</h4>
+            </div>
+            <div class="col-lg-8">
+              <div class="row g-4">
+                <div class="col-sm-6">
+                  <h5 class="goal-label">User Goals</h5>
+                  <ul class="goal-list">
+                    <li>Book an appointment without assistance</li>
+                    <li>Join a video call confidently</li>
+                    <li>Access medical records easily</li>
+                    <li>Feel safe and supported throughout</li>
+                  </ul>
+                </div>
+                <div class="col-sm-6">
+                  <h5 class="goal-label">Business Goals</h5>
+                  <ul class="goal-list">
+                    <li>Achieve WCAG 2.1 AA compliance</li>
+                    <li>Reduce appointment abandonment by 40%</li>
+                    <li>Cut support calls by 50%</li>
+                    <li>Expand into senior care market</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr class="case-divider">
+
+          <div class="row">
+            <div class="col-lg-4 mb-4 mb-lg-0">
+              <h4 class="case-section-title">Process</h4>
+            </div>
+            <div class="col-lg-8">
+              <div class="process-steps-inline">
+                <div class="process-step-item">
+                  <span class="step-num">01</span>
+                  <h5>Inclusive Research</h5>
+                  <p>Partnered with 3 senior care facilities to conduct contextual inquiry sessions. Observed 18 patients using the existing app and documented 47 accessibility barriers across the journey.</p>
+                </div>
+                <div class="process-step-item">
+                  <span class="step-num">02</span>
+                  <h5>Accessibility Audit</h5>
+                  <p>Performed a comprehensive WCAG 2.1 audit using automated tools and manual screen reader testing. Documented 92 violations and prioritized them by severity and user impact.</p>
+                </div>
+                <div class="process-step-item">
+                  <span class="step-num">03</span>
+                  <h5>Simplified Flows</h5>
+                  <p>Reduced the booking flow from 7 steps to 3. Introduced a "guided mode" with larger touch targets, clearer labels, and step-by-step audio instructions for users who opted in.</p>
+                </div>
+                <div class="process-step-item">
+                  <span class="step-num">04</span>
+                  <h5>Inclusive Testing</h5>
+                  <p>Tested with 20 participants across age groups, abilities, and assistive technology setups. Iterated 4 times on the video consultation interface to achieve 95% task completion with screen readers.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr class="case-divider">
+
+          <div class="row">
+            <div class="col-lg-4 mb-4 mb-lg-0">
+              <h4 class="case-section-title">Results</h4>
+            </div>
+            <div class="col-lg-8">
+              <div class="results-grid">
+                <div class="result-card">
+                  <span class="result-number">+35%</span>
+                  <span class="result-desc">Appointment Completion (65+)</span>
+                </div>
+                <div class="result-card">
+                  <span class="result-number">100%</span>
+                  <span class="result-desc">WCAG 2.1 AA Compliance</span>
+                </div>
+                <div class="result-card">
+                  <span class="result-number">-58%</span>
+                  <span class="result-desc">Support Calls</span>
+                </div>
+                <div class="result-card">
+                  <span class="result-number">4.8/5</span>
+                  <span class="result-desc">Patient Satisfaction Score</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr class="case-divider">
+
+          <div class="row">
+            <div class="col-lg-4 mb-4 mb-lg-0">
+              <h4 class="case-section-title">Key Learnings</h4>
+            </div>
+            <div class="col-lg-8">
+              <p data-i18n="cs2.learnings">Designing for accessibility improved the experience for everyone — not just the target demographic. The simplified flows, clearer hierarchy, and larger touch targets reduced errors and increased satisfaction scores across all user segments. Inclusive design isn't a constraint; it's a competitive advantage.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ===== Case Study 3 ===== -->
+      <article class="case-study scroll-reveal" id="cs-cartly">
+        <div class="case-study-header">
+          <div class="row align-items-end">
+            <div class="col-lg-8">
+              <span class="case-label" data-i18n="cs3.label">Case Study 03</span>
+              <h3 class="case-title" data-i18n="cs3.title">Cartly — Conversion-Driven E-Commerce Redesign</h3>
+              <p class="case-excerpt" data-i18n="cs3.excerpt">Redesigned the mobile checkout experience for a D2C brand, lifting mobile conversion by 28% and reducing cart abandonment by 41%.</p>
+            </div>
+            <div class="col-lg-4">
+              <div class="case-meta">
+                <div class="meta-item"><span class="meta-label" data-i18n="cs.metaRole">Role</span><span class="meta-value" data-i18n="cs3.role">UX/UI Design Lead</span></div>
+                <div class="meta-item"><span class="meta-label" data-i18n="cs.metaTimeline">Timeline</span><span class="meta-value" data-i18n="cs3.timeline">3 months</span></div>
+                <div class="meta-item"><span class="meta-label" data-i18n="cs.metaTeam">Team</span><span class="meta-value" data-i18n="cs3.team">2 Designers, 5 Engineers, 1 PM</span></div>
+                <div class="meta-item"><span class="meta-label" data-i18n="cs.metaIndustry">Industry</span><span class="meta-value" data-i18n="cs3.industry">E-Commerce / D2C</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-visual">
+          <div class="case-visual-placeholder">
+            <div class="placeholder-inner">
+              <i class="bi bi-cart3"></i>
+              <span>Cartly — Mobile Checkout Flow</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-body">
+          <div class="row">
+            <div class="col-lg-4 mb-4 mb-lg-0">
+              <h4 class="case-section-title" data-i18n="cs.challenge">The Challenge</h4>
+            </div>
+            <div class="col-lg-8">
+              <p data-i18n="cs3.challengeP1">Cartly, a fast-growing D2C brand, was seeing 73% of their traffic from mobile but converting at only 1.2% — well below the 3% industry benchmark. Analytics revealed that the checkout flow was the primary bottleneck: a 5-page desktop-first design that hadn't been optimized for mobile users.</p>
+              <p data-i18n="cs3.challengeP2">With $2.4M in monthly revenue at stake, even a small conversion improvement would have a significant bottom-line impact.</p>
+            </div>
+          </div>
+
+          <hr class="case-divider">
+
+          <div class="row">
+            <div class="col-lg-4 mb-4 mb-lg-0">
+              <h4 class="case-section-title">Goals</h4>
+            </div>
+            <div class="col-lg-8">
+              <div class="row g-4">
+                <div class="col-sm-6">
+                  <h5 class="goal-label">User Goals</h5>
+                  <ul class="goal-list">
+                    <li>Complete checkout in under 60 seconds</li>
+                    <li>Feel confident about payment security</li>
+                    <li>Easily apply discounts and promos</li>
+                    <li>Track order status seamlessly</li>
+                  </ul>
+                </div>
+                <div class="col-sm-6">
+                  <h5 class="goal-label">Business Goals</h5>
+                  <ul class="goal-list">
+                    <li>Lift mobile conversion to 2.5%+</li>
+                    <li>Reduce cart abandonment by 35%</li>
+                    <li>Increase average order value by 15%</li>
+                    <li>Improve mobile NPS score</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr class="case-divider">
+
+          <div class="row">
+            <div class="col-lg-4 mb-4 mb-lg-0">
+              <h4 class="case-section-title">Process</h4>
+            </div>
+            <div class="col-lg-8">
+              <div class="process-steps-inline">
+                <div class="process-step-item">
+                  <span class="step-num">01</span>
+                  <h5>Data Analysis</h5>
+                  <p>Analyzed 6 months of funnel data, heatmaps, and session recordings. Identified 5 critical drop-off points: address form, payment method selection, shipping options, promo code entry, and order confirmation.</p>
+                </div>
+                <div class="process-step-item">
+                  <span class="step-num">02</span>
+                  <h5>Competitive Analysis</h5>
+                  <p>Benchmarked checkout experiences from 12 best-in-class D2C brands. Documented patterns in single-page checkout, express payment, and trust signal placement.</p>
+                </div>
+                <div class="process-step-item">
+                  <span class="step-num">03</span>
+                  <h5>Mobile-First Redesign</h5>
+                  <p>Consolidated 5 pages into a single-page checkout with progressive disclosure. Designed thumb-friendly controls, integrated Apple Pay and Google Pay, and added real-time form validation.</p>
+                </div>
+                <div class="process-step-item">
+                  <span class="step-num">04</span>
+                  <h5>A/B Testing</h5>
+                  <p>Ran a controlled A/B test with 50,000 users over 4 weeks. The redesigned checkout outperformed the control across all metrics, with statistical significance reached at week 2.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr class="case-divider">
+
+          <div class="row">
+            <div class="col-lg-4 mb-4 mb-lg-0">
+              <h4 class="case-section-title">Results</h4>
+            </div>
+            <div class="col-lg-8">
+              <div class="results-grid">
+                <div class="result-card">
+                  <span class="result-number">+28%</span>
+                  <span class="result-desc">Mobile Conversion Rate</span>
+                </div>
+                <div class="result-card">
+                  <span class="result-number">-41%</span>
+                  <span class="result-desc">Cart Abandonment</span>
+                </div>
+                <div class="result-card">
+                  <span class="result-number">+18%</span>
+                  <span class="result-desc">Average Order Value</span>
+                </div>
+                <div class="result-card">
+                  <span class="result-number">42 sec</span>
+                  <span class="result-desc">Avg. Checkout Time</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr class="case-divider">
+
+          <div class="row">
+            <div class="col-lg-4 mb-4 mb-lg-0">
+              <h4 class="case-section-title">Key Learnings</h4>
+            </div>
+            <div class="col-lg-8">
+              <p data-i18n="cs3.learnings">The single biggest conversion lever was trust — not speed. While the streamlined flow reduced friction, the addition of security badges, real-time validation, and transparent pricing had the largest measurable impact on completion rates. Users don't abandon because checkout is slow; they abandon because they don't feel safe.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ PROCESS ============ -->
+  <section class="section-padding surface-alt" id="process">
+    <div class="container">
+      <div class="text-center mb-5 pb-3">
+        <span class="section-label scroll-reveal" data-i18n="process.label">Methodology</span>
+        <h2 class="section-title scroll-reveal" data-i18n="process.title">Design Process</h2>
+        <p class="section-desc scroll-reveal" data-i18n="process.desc">A structured, adaptable framework for turning ambiguity into clarity.</p>
+      </div>
+
+      <div class="process-framework">
+        <div class="row g-4">
+          <div class="col-md-6 col-xl-4 scroll-reveal">
+            <div class="process-card">
+              <span class="process-num">01</span>
+              <h3 class="process-card-title" data-i18n="process.s1Title">Discover</h3>
+              <p class="process-card-desc" data-i18n="process.s1Desc">Understand the problem space through user research, stakeholder interviews, data analysis, and competitive benchmarking. Identify unmet needs and opportunity areas.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-4 scroll-reveal" style="animation-delay:.1s">
+            <div class="process-card">
+              <span class="process-num">02</span>
+              <h3 class="process-card-title" data-i18n="process.s2Title">Define</h3>
+              <p class="process-card-desc" data-i18n="process.s2Desc">Synthesize research into actionable insights. Frame the problem, define success metrics, map user journeys, and align stakeholders around a shared vision.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-4 scroll-reveal" style="animation-delay:.2s">
+            <div class="process-card">
+              <span class="process-num">03</span>
+              <h3 class="process-card-title" data-i18n="process.s3Title">Ideate</h3>
+              <p class="process-card-desc" data-i18n="process.s3Desc">Explore multiple directions through sketching, wireframing, and collaborative workshops. Diverge before converging — the best solutions come from unexpected places.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-4 scroll-reveal" style="animation-delay:.3s">
+            <div class="process-card">
+              <span class="process-num">04</span>
+              <h3 class="process-card-title" data-i18n="process.s4Title">Design</h3>
+              <p class="process-card-desc" data-i18n="process.s4Desc">Craft the solution with attention to hierarchy, consistency, and delight. Build design systems, define interaction patterns, and create pixel-perfect deliverables.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-4 scroll-reveal" style="animation-delay:.4s">
+            <div class="process-card">
+              <span class="process-num">05</span>
+              <h3 class="process-card-title" data-i18n="process.s5Title">Validate</h3>
+              <p class="process-card-desc" data-i18n="process.s5Desc">Test with real users. Run usability tests, gather feedback, measure against success metrics, and iterate until the experience meets the quality bar.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-4 scroll-reveal" style="animation-delay:.5s">
+            <div class="process-card">
+              <span class="process-num">06</span>
+              <h3 class="process-card-title" data-i18n="process.s6Title">Optimize</h3>
+              <p class="process-card-desc" data-i18n="process.s6Desc">Design doesn't end at launch. Monitor analytics, run A/B tests, gather user feedback, and continuously improve the experience based on real-world data.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section class="section-padding" id="experience">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-5 mb-lg-0">
+          <span class="section-label scroll-reveal" data-i18n="exp.label">Career</span>
+          <h2 class="section-title scroll-reveal" data-i18n="exp.title" data-i18n-html="true">Professional<br>Experience</h2>
+        </div>
+        <div class="col-lg-7 offset-lg-1">
+          <div class="timeline">
+
+            <div class="timeline-item scroll-reveal">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <h3 class="timeline-company">TechVault Inc.</h3>
+                  <span class="timeline-date" data-i18n="exp.t1Date">2022 — Present</span>
+                </div>
+                <span class="timeline-role" data-i18n="exp.t1Role">Senior UX/UI Designer</span>
+                <p class="timeline-desc" data-i18n="exp.t1Desc">Leading product design for a B2B SaaS platform serving 200K+ users. Established the design system, introduced user research practices, and drove a redesign that increased user engagement by 38%.</p>
+                <ul class="timeline-achievements">
+                  <li>Built a design system with 200+ components adopted across 4 product teams</li>
+                  <li>Reduced feature delivery time by 30% through improved design-dev handoff</li>
+                  <li>Mentored 2 junior designers into mid-level roles</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item scroll-reveal">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <h3 class="timeline-company">PixelCraft Studio</h3>
+                  <span class="timeline-date">2019 — 2022</span>
+                </div>
+                <span class="timeline-role" data-i18n="exp.t2Role">UX/UI Designer</span>
+                <p class="timeline-desc" data-i18n="exp.t2Desc">Designed digital products for clients across fintech, healthcare, and e-commerce. Led end-to-end design for 15+ projects, collaborating closely with cross-functional teams.</p>
+                <ul class="timeline-achievements">
+                  <li>Delivered the FinFlow redesign that increased activation by 47%</li>
+                  <li>Introduced usability testing as a standard practice in the agency workflow</li>
+                  <li>Won 2 industry design awards for client work</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item scroll-reveal">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <h3 class="timeline-company">Startup Lab</h3>
+                  <span class="timeline-date">2016 — 2019</span>
+                </div>
+                <span class="timeline-role" data-i18n="exp.t3Role">UX Designer</span>
+                <p class="timeline-desc" data-i18n="exp.t3Desc">Joined as the first designer for an early-stage startup. Built the product design function from scratch, defining processes, tools, and design culture.</p>
+                <ul class="timeline-achievements">
+                  <li>Designed the MVP that secured $2.5M in seed funding</li>
+                  <li>Grew the design team from 1 to 4 designers</li>
+                  <li>Established user research and testing frameworks</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item scroll-reveal">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <h3 class="timeline-company">Freelance</h3>
+                  <span class="timeline-date">2014 — 2016</span>
+                </div>
+                <span class="timeline-role" data-i18n="exp.t4Role">UI Designer</span>
+                <p class="timeline-desc" data-i18n="exp.t4Desc">Started my career designing websites and mobile apps for small businesses and startups. Developed a strong foundation in visual design, typography, and front-end development.</p>
+                <ul class="timeline-achievements">
+                  <li>Completed 20+ client projects with a 100% satisfaction rate</li>
+                  <li>Built expertise across web, mobile, and responsive design</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section class="section-padding surface-alt" id="testimonials">
+    <div class="container">
+      <div class="text-center mb-5 pb-3">
+        <span class="section-label scroll-reveal" data-i18n="test.label">Kind Words</span>
+        <h2 class="section-title scroll-reveal" data-i18n="test.title">What People Say</h2>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4 scroll-reveal">
+          <div class="testimonial-card">
+            <p class="testimonial-text" data-i18n="test.q1">"Nicolás doesn't just design interfaces — he solves business problems through design. His work on our platform directly contributed to a 40% increase in user retention."</p>
+            <div class="testimonial-author">
+              <div>
+                <span class="author-name">Sarah Chen</span>
+                <span class="author-role">VP of Product, TechVault</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 scroll-reveal" style="animation-delay:.1s">
+          <div class="testimonial-card">
+            <p class="testimonial-text" data-i18n="test.q2">"One of the most thoughtful designers I've worked with. He brings structure to ambiguity and always grounds his decisions in user research and data."</p>
+            <div class="testimonial-author">
+              <div>
+                <span class="author-name">Marcus Rivera</span>
+                <span class="author-role">Engineering Lead, PixelCraft</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 scroll-reveal" style="animation-delay:.2s">
+          <div class="testimonial-card">
+            <p class="testimonial-text" data-i18n="test.q3">"Nicolás transformed our MVP from a functional prototype into a product investors fell in love with. His design was instrumental in closing our seed round."</p>
+            <div class="testimonial-author">
+              <div>
+                <span class="author-name">Alex Okafor</span>
+                <span class="author-role">CEO & Founder, Startup Lab</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section-padding" id="contact">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <span class="section-label scroll-reveal" data-i18n="contact.label">Get in Touch</span>
+          <h2 class="contact-title scroll-reveal" data-i18n="contact.title" data-i18n-html="true">Let's build something<br><em>great</em> together.</h2>
+          <p class="contact-desc scroll-reveal" data-i18n="contact.desc">I'm always open to discussing new projects, design challenges, and opportunities to create meaningful impact.</p>
+          <div class="contact-links scroll-reveal">
+            <a href="mailto:nicolasmora2788@gmail.com" class="btn btn-accent btn-lg" data-i18n="contact.cta" data-i18n-html="true">
+              <i class="bi bi-envelope me-2"></i>Let's talk about your project
+            </a>
+          </div>
+          <div class="contact-social scroll-reveal">
+            <a href="#" class="social-link" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="social-link" aria-label="Dribbble"><i class="bi bi-dribbble"></i></a>
+            <a href="#" class="social-link" aria-label="Behance"><i class="bi bi-behance"></i></a>
+            <a href="#" class="social-link" aria-label="GitHub"><i class="bi bi-github"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <span class="footer-brand">NM<span class="accent-dot">.</span></span>
+          <span class="footer-copy" data-i18n="footer.copy">Designed & built by Nicolás Mora</span>
+        </div>
+        <div class="col-md-6 text-md-end mt-3 mt-md-0">
+          <a href="#hero" class="footer-link" data-i18n="footer.top" data-i18n-html="true">Back to top <i class="bi bi-arrow-up-short"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
