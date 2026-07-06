@@ -13,7 +13,7 @@ const I18n = (() => {
        ============================================================ */
     en: {
       // Meta
-      'meta.title': 'Nicolás Mora — Senior UX/UI Designer',
+      'meta.title': 'Nicolás Mora — UX/UI Designer',
       'meta.description': 'Senior UX/UI Designer — Crafting intuitive digital experiences that drive measurable business outcomes.',
 
       // Nav
@@ -318,7 +318,7 @@ const I18n = (() => {
        ============================================================ */
     es: {
       // Meta
-      'meta.title': 'Nicolás Mora — Diseñador UX/UI Senior',
+      'meta.title': 'Nicolás Mora — Diseñador UX/UI',
       'meta.description': 'Diseñador UX/UI Senior — Creando experiencias digitales intuitivas que generan resultados de negocio medibles.',
 
       // Nav
