@@ -27,7 +27,7 @@ const I18n = (() => {
 
       // Hero
       'hero.availability': 'Based in Chile · Available for Remote & Global Projects',
-      'hero.overline': 'Senior UX/UI Designer',
+      'hero.overline': 'UX/UI Designer',
       'hero.title': 'I design digital products<br class="d-none d-md-block">that help people<br class="d-none d-md-block">make better decisions.',
       'hero.sub': 'I transform complex products into clear, intuitive experiences by combining UX strategy, research and measurable business outcomes.',
       'hero.cta1': 'View Case Studies',
@@ -332,7 +332,7 @@ const I18n = (() => {
 
       // Hero
       'hero.availability': 'Basado en Chile · Disponible para proyectos remotos y globales',
-      'hero.overline': 'Diseñador UX/UI Senior',
+      'hero.overline': 'Diseñador UX/UI',
       'hero.title': 'Diseño productos digitales<br class="d-none d-md-block">que ayudan a las personas<br class="d-none d-md-block">a <em>decidir mejor</em>.',
       'hero.sub': 'Transformo productos complejos en experiencias claras e intuitivas combinando estrategia UX, investigación y resultados de negocio medibles.',
       'hero.cta1': 'Ver Casos de Estudio',
