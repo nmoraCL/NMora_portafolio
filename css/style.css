@@ -196,6 +196,50 @@ em {
   font-size: .9375rem;
 }
 
+/* Secondary case study CTA — used on project cards */
+.btn-case-study {
+  display: inline-flex;
+  align-items: center;
+  gap: .375rem;
+  font-family: var(--font-body);
+  font-size: .8125rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  background: transparent;
+  border: 1.5px solid var(--accent);
+  border-radius: var(--radius-sm);
+  padding: .4375rem 1rem;
+  text-decoration: none;
+  box-shadow: none;
+  transition: border-color 250ms var(--ease-out),
+              background 250ms var(--ease-out),
+              box-shadow 250ms var(--ease-out);
+  cursor: pointer;
+}
+
+.btn-case-study::after {
+  content: '→';
+  display: inline-block;
+  color: var(--accent);
+  transition: transform 250ms var(--ease-out);
+}
+
+.btn-case-study:hover {
+  border-color: var(--accent-hover);
+  background: var(--accent-subtle);
+  box-shadow: 0 0 8px rgba(228, 213, 74, .15);
+}
+
+.btn-case-study:hover::after {
+  transform: translateX(4px);
+}
+
+.btn-case-study--disabled {
+  opacity: .3;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 /* ============================================================
    HERO
    ============================================================ */

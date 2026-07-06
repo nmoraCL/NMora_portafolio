@@ -1,0 +1,1012 @@
+/* ============================================================
+   CASE STUDY — Editorial Layout System
+   Extends style.css. Do not duplicate shared tokens here.
+   ============================================================ */
+
+/* ── Reading Progress Bar ── */
+.cs-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background: var(--accent);
+  z-index: 2000;
+  transition: width .1s linear;
+  pointer-events: none;
+}
+
+/* ── Containers ── */
+.cs-container {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(1.25rem, 5vw, 3rem);
+  padding-right: clamp(1.25rem, 5vw, 3rem);
+}
+
+/* Slightly wider for better editorial presence */
+.cs-container--reading {
+  max-width: 820px;
+}
+
+.cs-container--wide {
+  max-width: 1000px;
+}
+
+/* ============================================================
+   SCREEN 01 — HERO
+   ============================================================ */
+.cs-hero {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 6.5rem;           /* more top breathing room */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.cs-hero > .cs-container {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 2.5rem;
+}
+
+.cs-hero-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Back nav — sits at the top of the hero container ── */
+.cs-back-nav {
+  padding-top: .25rem;
+  margin-bottom: auto;
+}
+
+.cs-back-link {
+  font-size: .8125rem;
+  font-weight: 500;
+  color: var(--text-tertiary);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: .25rem;
+  letter-spacing: .01em;
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.cs-back-link:hover {
+  color: var(--text-secondary);
+}
+
+/* Hero chips (pill outline tags) */
+.cs-hero-chips {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.cs-hero-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: .5rem 1.125rem;
+  border: 1px solid var(--border-default);
+  border-radius: 999px;
+  font-size: .875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  line-height: 1;
+  background: transparent;
+}
+
+/* Client name */
+.cs-client-name {
+  font-size: .875rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--text-accent);
+  margin-bottom: .875rem;
+}
+
+/* Hero title — exact match of homepage .hero-title */
+.cs-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5.5vw, 4.5rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.1;
+  letter-spacing: -.03em;
+  margin-bottom: 1.5rem;
+}
+
+/* Project logline */
+.cs-hero-logline {
+  font-size: clamp(1rem, 1.5vw, 1.1875rem);
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 38rem;
+  margin-bottom: 1.25rem;
+}
+
+/* Project summary — context paragraph below the logline */
+.cs-hero-summary {
+  font-size: .9375rem;
+  color: var(--text-tertiary);
+  line-height: 1.75;
+  max-width: 38rem;
+  margin-bottom: 0;
+}
+
+/* Meta bar — full-width row below hero content */
+.cs-hero-meta {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.cs-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+}
+
+.cs-meta-label {
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  white-space: nowrap;
+}
+
+.cs-meta-value {
+  font-size: .9375rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+/* Scroll cue */
+.cs-scroll-hint {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .4rem;
+  margin-top: auto;
+  color: var(--text-tertiary);
+  font-size: .6875rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  transition: opacity var(--duration-slow) var(--ease-out);
+}
+
+.cs-scroll-arrow {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  animation: cs-bounce 2s ease-in-out infinite;
+}
+
+@keyframes cs-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+
+/* Background glow — mirrors portfolio hero */
+.cs-hero-bg-glow {
+  position: absolute;
+  bottom: -20%;
+  right: -10%;
+  width: 65vw;
+  height: 65vw;
+  max-width: 860px;
+  max-height: 860px;
+  background: radial-gradient(circle, rgba(228, 213, 74, .04) 0%, transparent 65%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ROW 1: two-column — text left (~42%), image right (~58%) */
+.cs-hero-row1 {
+  display: grid;
+  grid-template-columns: 42fr 58fr;
+  gap: clamp(2rem, 4vw, 4rem);
+  align-items: start;
+  margin-bottom: clamp(2rem, 2.5vw, 2.5rem);
+}
+
+/* Image column — aligned with top of project title */
+.cs-hero-visual {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  z-index: 2;
+  padding-top: 7rem;
+}
+
+.cs-hero-mockup {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* ============================================================
+   SECTION FRAMEWORK
+   ============================================================ */
+.cs-section {
+  padding: var(--section-py) 0;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.cs-section--alt {
+  background: var(--bg-secondary);
+}
+
+/* Section eyebrow */
+.cs-section-header {
+  display: flex;
+  align-items: center;
+  gap: .875rem;
+  margin-bottom: 2.75rem;        /* was 2rem */
+}
+
+.cs-section-num {
+  font-family: var(--font-display);
+  font-size: .8125rem;
+  font-weight: 700;
+  color: var(--text-accent);
+  opacity: .5;
+  letter-spacing: .06em;
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+}
+
+.cs-section-name {
+  font-size: .8125rem;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+
+/* Section headline */
+.cs-section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.625rem, 3vw, 2.375rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -.025em;
+  line-height: 1.2;
+  margin-bottom: 2.25rem;        /* was 1.75rem */
+}
+
+.cs-body-text {
+  font-size: 1.0625rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+}
+
+/* ============================================================
+   ANIMATION VARIANTS
+   ============================================================ */
+
+/* Fade-only — no transform, just opacity */
+.scroll-reveal.cs-fade-only {
+  transform: none;
+}
+
+/* Stagger items — same base as scroll-reveal, delay set inline */
+.cs-insight-card.scroll-reveal {
+  /* Inherits from scroll-reveal in style.css */
+}
+
+/* Image-left + text-right layout for body sections */
+.cs-section-media {
+  display: flex;
+  gap: 3.5rem;
+  align-items: flex-start;
+}
+
+.cs-section-media__img {
+  flex: 0 0 40%;
+  width: 40%;
+  border-radius: var(--radius-lg);
+  object-fit: cover;
+  display: block;
+}
+
+.cs-section-media__text {
+  flex: 1;
+  min-width: 0;
+}
+
+.cs-section-media__text p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin-bottom: 1.25rem;
+}
+
+.cs-section-media__text p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 767.98px) {
+  .cs-section-media {
+    flex-direction: column;
+  }
+
+  .cs-section-media__img {
+    width: 100%;
+    flex: none;
+  }
+}
+
+/* ============================================================
+   SCREEN 02 & 12 — AT A GLANCE / IMPACT
+   Editorial stats — no cards, just numbers and dividers
+   ============================================================ */
+.cs-glance {
+  background: var(--bg-secondary);
+  padding: var(--section-py) 0;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.cs-glance-header {
+  margin-bottom: 3.5rem;         /* was 2.5rem */
+}
+
+.cs-section-chip {
+  display: inline-block;
+  font-size: .75rem;
+  font-weight: 700;
+  color: var(--text-accent);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.cs-impact-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -.02em;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+/* Editorial stats grid — typography-led, no card chrome */
+.cs-stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 2.75rem 0;
+}
+
+.cs-stat {
+  padding: 0 2.25rem;
+  border-right: 1px solid var(--border-subtle);
+}
+
+.cs-stat:first-child {
+  padding-left: 0;
+}
+
+.cs-stat:last-child {
+  border-right: none;
+}
+
+.cs-stat-number {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-accent);
+  letter-spacing: -.04em;
+  margin-bottom: .625rem;
+  line-height: 1;
+}
+
+.cs-stat-label {
+  font-size: .8125rem;
+  color: var(--text-tertiary);
+  line-height: 1.7;
+}
+
+.cs-stat-icon {
+  display: block;
+  font-size: 1.75rem;
+  color: var(--accent);
+  margin: 1rem 0 .75rem;
+  line-height: 1;
+}
+
+/* ============================================================
+   CONTENT PLACEHOLDERS
+   ============================================================ */
+
+/* Text content placeholder */
+.cs-placeholder {
+  background: var(--bg-surface);
+  border: 1px dashed var(--border-default);
+  border-radius: var(--radius-md);
+  padding: 3.5rem 2rem;          /* was 3rem */
+  text-align: center;
+  color: var(--text-tertiary);
+  font-size: .875rem;
+  font-style: italic;
+  margin-top: 1.25rem;
+}
+
+/* Visual placeholder — for screenshots/mockups */
+.cs-visual-placeholder {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.cs-visual-placeholder--tall {
+  aspect-ratio: 4 / 3;
+}
+
+.cs-visual-placeholder--hero {
+  aspect-ratio: 16 / 7;
+  margin-top: 4rem;              /* was 3.5rem */
+}
+
+.cs-placeholder-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .875rem;
+  color: var(--text-tertiary);
+  font-size: .875rem;
+  font-style: italic;
+  text-align: center;
+  padding: 2rem;
+}
+
+.cs-placeholder-inner i {
+  font-size: 2.25rem;
+  color: var(--accent);
+  opacity: .25;
+}
+
+/* ============================================================
+   SCREEN 06 — KEY INSIGHTS
+   ============================================================ */
+.cs-insights-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  margin-top: 3.5rem;            /* was 2.5rem */
+}
+
+.cs-insight-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 2rem;                 /* was 1.875rem */
+  transition: border-color var(--duration-normal) var(--ease-out),
+              transform var(--duration-normal) var(--ease-out);
+}
+
+.cs-insight-card:hover {
+  border-color: var(--accent-muted);
+  transform: translateY(-2px);
+}
+
+/* Outcome card variant — icon left, text right */
+.cs-insight-card--icon-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.cs-outcome-icon {
+  flex-shrink: 0;
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.625rem;
+  color: var(--accent);
+}
+
+.cs-outcome-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.cs-insight-num {
+  font-family: var(--font-display);
+  font-size: 1.625rem;
+  font-weight: 800;
+  color: var(--accent);
+  opacity: .3;
+  display: block;
+  margin-bottom: .75rem;         /* was .625rem */
+  line-height: 1;
+}
+
+.cs-insight-title {
+  font-family: var(--font-display);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: .5rem;
+}
+
+.cs-insight-desc {
+  font-size: .9375rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.cs-insight-implication {
+  font-size: .8125rem;
+  color: var(--text-tertiary);
+  line-height: 1.6;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.cs-insight-implication span {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+/* ============================================================
+   SCREEN 07 — HYPOTHESIS CALLOUT
+   ============================================================ */
+.cs-callout {
+  border-left: 2px solid var(--accent);
+  padding: 1.625rem 2rem;        /* was 1.375rem 1.875rem */
+  background: var(--accent-subtle);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  margin: 2.5rem 0 2rem;         /* was 2rem 0 1.5rem */
+}
+
+.cs-callout p {
+  font-family: var(--font-display);
+  font-size: clamp(1.0625rem, 1.5vw, 1.25rem);
+  color: var(--text-primary);
+  font-style: italic;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ============================================================
+   SCREEN 09 — PRODUCT EVOLUTION (BEFORE / AFTER)
+   ============================================================ */
+.cs-before-after {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3.5rem;
+}
+
+.cs-evolution-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;                     /* was .875rem */
+}
+
+.cs-evolution-label {
+  display: inline-flex;
+  align-items: center;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: .375rem .875rem;
+  border-radius: var(--radius-sm);
+  align-self: flex-start;
+}
+
+.cs-evolution-label--before {
+  background: rgba(255, 255, 255, .05);
+  color: var(--text-tertiary);
+}
+
+.cs-evolution-label--after {
+  background: var(--accent-subtle);
+  color: var(--text-accent);
+}
+
+/* Figma prototype embed — full-width, editorial frame */
+.cs-figma-embed {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  margin-top: 4rem;
+}
+
+.cs-figma-embed iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: none;
+  background: var(--bg-surface);
+}
+
+/* External-link CTA — suppresses the CSS → arrow; uses BI icon instead */
+.btn-case-study--ext::after {
+  display: none;
+}
+
+/* Evolution panel screenshots — consistent crop */
+.cs-evolution-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: var(--radius-xl);
+  display: block;
+}
+
+/* ============================================================
+   SCREEN 10 — DECISION LOG
+   ============================================================ */
+.cs-decision-log {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: var(--border-subtle);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-top: 3.5rem;            /* was 2.5rem */
+}
+
+.cs-decision-item {
+  background: var(--bg-surface);
+  padding: 2rem 2.25rem;         /* was 1.75rem 2rem */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+  transition: background var(--duration-fast) var(--ease-out);
+}
+
+.cs-decision-item:hover {
+  background: var(--bg-elevated);
+}
+
+.cs-decision-label {
+  display: block;
+  font-size: .6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--text-accent);
+  opacity: .7;
+  margin-bottom: .5rem;
+}
+
+.cs-decision-text {
+  font-size: .9375rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ============================================================
+   SCREEN 11 — IMPACT & LEARNINGS (two-column combined)
+   ============================================================ */
+.cs-impact-learnings-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 3.5rem;
+}
+
+.cs-impact-learnings-heading {
+  font-size: .75rem;
+  font-weight: 700;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  margin-bottom: 1.5rem;
+}
+
+.cs-impact-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* ============================================================
+   SCREEN 13 — LESSONS LEARNED
+   ============================================================ */
+.cs-lessons-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 3.5rem;            /* was 2.5rem */
+}
+
+.cs-lesson-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 2rem;                 /* was 1.875rem */
+  transition: border-color var(--duration-normal) var(--ease-out);
+}
+
+.cs-lesson-card:hover {
+  border-color: var(--border-strong);
+}
+
+.cs-lesson-icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-subtle);
+  border-radius: var(--radius-sm);
+  color: var(--accent);
+  font-size: 1rem;
+  margin-bottom: 1.375rem;       /* was 1.25rem */
+}
+
+.cs-lesson-title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: .5rem;
+}
+
+.cs-lesson-desc {
+  font-size: .9375rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ============================================================
+   SCREEN 14 — NEXT PROJECT
+   Editorial preview — big title, small CTA
+   ============================================================ */
+.cs-next {
+  padding: var(--section-py) 0;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.cs-next-label {
+  display: block;
+  font-size: .8125rem;
+  font-weight: 700;
+  color: var(--text-accent);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+}
+
+.cs-next-preview {
+  /* Nothing — flow layout */
+}
+
+/* Large editorial title for the next project name */
+.cs-next-project-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.75rem, 6.5vw, 5.5rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -.04em;
+  line-height: 1.02;
+  margin-bottom: .875rem;
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+/* Subtitle / description */
+.cs-next-project-desc {
+  font-size: clamp(.9375rem, 1.25vw, 1.0625rem);
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin-bottom: 2.75rem;
+  max-width: 36rem;
+}
+
+/* CTA link — small, accent-colored */
+.cs-next-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  font-size: .9375rem;
+  font-weight: 600;
+  color: var(--text-accent);
+  text-decoration: none;
+  letter-spacing: .01em;
+  transition: gap var(--duration-normal) var(--ease-out),
+              color var(--duration-fast) var(--ease-out);
+}
+
+.cs-next-cta:hover {
+  color: var(--accent-hover);
+  gap: .875rem;
+}
+
+.cs-next-cta i {
+  font-size: 1rem;
+  transition: transform var(--duration-normal) var(--ease-out);
+}
+
+.cs-next-cta:hover i {
+  transform: translateX(4px);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+/* Tablet */
+@media (max-width: 991.98px) {
+  .cs-hero-meta {
+    gap: 1.5rem;
+  }
+
+  .cs-hero-row1 {
+    grid-template-columns: 44fr 56fr;
+    gap: 2rem;
+  }
+
+  .cs-stats-row {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0;
+  }
+
+  .cs-stat {
+    padding: 2rem 1.75rem;
+    border-right: none;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .cs-stat:nth-child(odd) {
+    border-right: 1px solid var(--border-subtle);
+  }
+
+  .cs-stat:nth-last-child(-n+2) {
+    border-bottom: none;
+  }
+
+  .cs-stat:first-child {
+    padding-left: 1.75rem;
+  }
+
+  .cs-decision-item {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .cs-lessons-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cs-next-project-title {
+    font-size: clamp(2.25rem, 5vw, 4rem);
+  }
+}
+
+/* Mobile */
+@media (max-width: 767.98px) {
+  .cs-hero {
+    padding-top: 5.5rem;
+  }
+
+  .cs-hero-meta {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem 1rem;
+  }
+
+  .cs-hero-row1 {
+    grid-template-columns: 1fr;
+    margin-bottom: 3rem;
+  }
+
+  .cs-hero-visual {
+    padding-top: 0;
+  }
+
+  .cs-impact-learnings-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .cs-insights-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-before-after {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .cs-lessons-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-decision-item {
+    padding: 1.5rem;
+  }
+
+  .cs-stats-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cs-stat:nth-last-child(-n+2) {
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .cs-stat:last-child {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .cs-stats-row {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-stat {
+    border-right: none !important;
+  }
+
+  .cs-stat:nth-last-child(-n+2) {
+    border-bottom: 1px solid var(--border-subtle) !important;
+  }
+
+  .cs-stat:last-child {
+    border-bottom: none !important;
+  }
+
+  .cs-hero-meta {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem .75rem;
+  }
+}
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  .cs-scroll-arrow {
+    animation: none;
+  }
+
+  .cs-progress-bar {
+    transition: none;
+  }
+}

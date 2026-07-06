@@ -27,24 +27,26 @@ document.addEventListener('DOMContentLoaded', () => {
   // ── Active nav link on scroll ──
   const sections = document.querySelectorAll('section[id], header[id]');
   const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+  const NAV_OFFSET = 90; // fixed nav height + small buffer
 
-  const sectionObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const id = entry.target.getAttribute('id');
-          navLinks.forEach((link) => {
-            link.classList.toggle(
-              'active',
-              link.getAttribute('href') === '#' + id
-            );
-          });
-        }
-      });
-    },
-    { threshold: 0.2, rootMargin: '-80px 0px -50% 0px' }
-  );
-  sections.forEach((section) => sectionObserver.observe(section));
+  const activateNav = () => {
+    const scrollY = window.scrollY;
+    let current = '';
+
+    sections.forEach((section) => {
+      const sectionTop = section.getBoundingClientRect().top + scrollY;
+      if (scrollY >= sectionTop - NAV_OFFSET) {
+        current = section.id;
+      }
+    });
+
+    navLinks.forEach((link) => {
+      link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+    });
+  };
+
+  window.addEventListener('scroll', activateNav, { passive: true });
+  activateNav();
 
   // ── Close mobile nav on link click ──
   const navCollapse = document.getElementById('navbarNav');

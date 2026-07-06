@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Product Comparator — Transbank · UX Case Study by Nicolás Mora">
+  <meta name="author" content="Nicolás Mora">
+  <meta name="theme-color" content="#0a0a0b">
+  <title>Product Comparator — Transbank · Nicolás Mora</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/case-study.css">
+</head>
+<body>
+
+  <!-- Reading Progress Bar -->
+  <div class="cs-progress-bar" id="csProgressBar" aria-hidden="true"></div>
+
+  <!-- ============ NAVIGATION ============ -->
+  <nav class="navbar navbar-expand-lg fixed-top nav-blur" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand brand-mark" href="../">NM<span class="accent-dot">.</span></a>
+      <button class="navbar-toggler border-0 shadow-none" type="button"
+              data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="../#about"        data-i18n="nav.about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="../#skills"       data-i18n="nav.skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="../#case-studies" data-i18n="nav.caseStudies">Case Studies</a></li>
+          <li class="nav-item"><a class="nav-link" href="../#process"      data-i18n="nav.process">Process</a></li>
+          <li class="nav-item"><a class="nav-link" href="../#experience"   data-i18n="nav.experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="../#contact"      data-i18n="nav.contact">Contact</a></li>
+        </ul>
+        <a href="../#contact" class="btn btn-accent ms-lg-4 d-none d-lg-inline-flex" data-i18n="nav.cta">Let's Talk</a>
+        <div class="lang-switcher" role="group" aria-label="Language selector">
+          <button class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+          <button class="lang-btn" data-lang="es" aria-pressed="false">ES</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ============================================================
+       SCREEN 01 — HERO
+       ============================================================ -->
+  <header class="cs-hero" id="cs-top">
+    <div class="cs-container">
+
+      <!-- Back to Portfolio — subtle breadcrumb at the top of the hero -->
+      <div class="cs-back-nav fade-in">
+        <a href="../" class="cs-back-link" data-i18n="cs.back">← Back to Portfolio</a>
+      </div>
+
+      <!-- ROW 1: two-column content + image -->
+      <div class="cs-hero-row1">
+
+        <div class="cs-hero-content">
+
+          <div class="cs-hero-chips fade-in">
+            <span class="cs-hero-chip" data-i18n="tb.chip1">Case Study 01</span>
+            <span class="cs-hero-chip" data-i18n="tb.chip2">Digital Payments</span>
+          </div>
+
+          <div class="fade-in" style="animation-delay:.07s">
+            <p class="cs-client-name">Transbank</p>
+            <h1 class="cs-hero-title" data-i18n="tb.heroTitle" data-i18n-html="true">Product<br>Comparator</h1>
+          </div>
+
+          <p class="cs-hero-logline fade-in" style="animation-delay:.14s" data-i18n="tb.heroLogline">
+            Helping businesses make confident payment decisions by redesigning
+            Transbank's product comparison experience.
+          </p>
+
+          <p class="cs-hero-summary fade-in" style="animation-delay:.20s" data-i18n="tb.heroSummary">
+            Transbank redesigned its Product Comparator to simplify how businesses
+            evaluate payment solutions. Through user research, behavioral analysis and
+            multiple design iterations, we transformed a feature-heavy comparison tool
+            into a decision-focused experience that improved discoverability, reduced
+            cognitive load and increased conversion by an estimated 11.5%.
+          </p>
+
+        </div><!-- .cs-hero-content -->
+
+        <div class="cs-hero-visual fade-in" style="animation-delay:.42s">
+          <img
+            src="../assets/case-studies/product-comparator/hero.png"
+            alt="Product Comparator — desktop and mobile interface"
+            class="cs-hero-mockup"
+            draggable="false"
+          >
+        </div>
+
+      </div><!-- .cs-hero-row1 -->
+
+      <!-- ROW 2: full-width metadata bar -->
+      <div class="cs-hero-meta fade-in" style="animation-delay:.28s">
+        <div class="cs-meta-item">
+          <span class="cs-meta-label" data-i18n="cs.metaRole">Role</span>
+          <span class="cs-meta-value" data-i18n="tb.metaRoleVal">UX/UI Designer</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label" data-i18n="cs.metaTimeline">Timeline</span>
+          <span class="cs-meta-value" data-i18n="tb.metaTimelineVal">6 months</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label" data-i18n="cs.metaTeam">Team</span>
+          <span class="cs-meta-value" data-i18n="tb.metaTeamVal" data-i18n-html="true">UX/UI Designer<br>UX Researcher<br>CRO Specialist<br>Developer</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label" data-i18n="cs.metaIndustry">Industry</span>
+          <span class="cs-meta-value" data-i18n="tb.metaIndustryVal">Digital Payments</span>
+        </div>
+      </div><!-- .cs-hero-meta -->
+
+      <div class="cs-scroll-hint fade-in" style="animation-delay:.35s" aria-hidden="true">
+        <span class="cs-scroll-label" data-i18n="tb.scroll">Scroll</span>
+        <div class="cs-scroll-arrow"><i class="bi bi-arrow-down"></i></div>
+      </div>
+
+    </div><!-- .cs-container -->
+    <div class="cs-hero-bg-glow" aria-hidden="true"></div>
+  </header>
+
+
+  <!-- ============================================================
+       SCREEN 02 — PROJECT AT A GLANCE
+       ============================================================ -->
+  <section class="cs-glance" id="cs-glance">
+    <div class="cs-container">
+
+      <div class="cs-glance-header scroll-reveal">
+        <span class="cs-section-chip" data-i18n="tb.s02chip">02 · At a glance</span>
+      </div>
+
+      <div class="cs-stats-row scroll-reveal">
+
+        <div class="cs-stat">
+          <span class="cs-stat-number" data-i18n="tb.s02stat1title">Problem</span>
+          <span class="cs-stat-label" data-i18n="tb.s02stat1desc">Businesses struggled to understand which payment solution best fit their needs. Product information was fragmented, difficult to compare, and overloaded with technical details.</span>
+        </div>
+
+        <div class="cs-stat">
+          <span class="cs-stat-number" data-i18n="tb.s02stat2title">Objective</span>
+          <span class="cs-stat-label" data-i18n="tb.s02stat2desc">Redesign the comparison experience to help businesses make faster, more confident purchasing decisions while supporting Transbank's commercial goals.</span>
+        </div>
+
+        <div class="cs-stat">
+          <span class="cs-stat-number" data-i18n="tb.s02stat3title">Approach</span>
+          <span class="cs-stat-label" data-i18n="tb.s02stat3desc">Combined user interviews, behavioral analytics, Hotjar insights, competitive benchmarking, CRO recommendations and iterative UX/UI design.</span>
+        </div>
+
+        <div class="cs-stat">
+          <span class="cs-stat-number" data-i18n="tb.s02stat4title">Impact</span>
+          <span class="cs-stat-label" data-i18n="tb.s02stat4desc">Delivered a simplified comparison experience that improved product discoverability, reduced decision-making friction and contributed to an estimated 6% increase in conversion.</span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SCREEN 03 — THE CHALLENGE
+       ============================================================ -->
+  <section class="cs-section" id="cs-challenge">
+    <div class="cs-container">
+
+      <div class="cs-section-header scroll-reveal">
+        <span class="cs-section-num">03</span>
+        <span class="cs-section-name" data-i18n="cs.challenge">The Challenge</span>
+      </div>
+
+      <div class="cs-section-media scroll-reveal cs-fade-only">
+        <img
+          src="../assets/case-studies/product-comparator/img_sec3.jpg"
+          alt="Original Product Comparator — before the redesign"
+          class="cs-section-media__img"
+        >
+        <div class="cs-section-media__text">
+          <p data-i18n="tb.s03p1">Transbank's growing portfolio of payment solutions made it increasingly difficult for businesses to understand which product best suited their needs.</p>
+          <p data-i18n="tb.s03p2">Although detailed product information was available, it was distributed across multiple pages and focused heavily on technical specifications rather than helping customers make informed decisions. As a result, comparing alternatives required unnecessary effort, creating friction during the evaluation process and reducing confidence before purchase.</p>
+          <p data-i18n="tb.s03p3">The challenge was to transform the Product Comparator from an information-heavy catalog into a decision-making tool that helped businesses quickly identify the right solution while supporting Transbank's commercial objectives.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SCREEN 04 — DISCOVERY
+       ============================================================ -->
+  <section class="cs-section cs-section--alt" id="cs-discovery">
+    <div class="cs-container cs-container--reading">
+
+      <div class="cs-section-header scroll-reveal">
+        <span class="cs-section-num">04</span>
+        <span class="cs-section-name" data-i18n="tb.s04name">Discovery</span>
+      </div>
+
+      <div class="scroll-reveal">
+        <p data-i18n="tb.s04p1">Before exploring solutions, we needed to understand how businesses evaluated payment products, where uncertainty appeared during the decision-making process, and what information truly influenced their choice.</p>
+        <p data-i18n="tb.s04p2">During a three-week discovery phase, we combined qualitative and quantitative methods to build a complete picture of the customer journey. This included customer interviews, analytics review, behavioral analysis, competitive benchmarking, and collaborative sessions with Marketing, CRO, and Development.</p>
+        <p data-i18n="tb.s04p3">Rather than validating assumptions, the goal was to uncover the real barriers preventing businesses from confidently selecting the right payment solution.</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SCREEN 05 — RESEARCH
+       ============================================================ -->
+  <section class="cs-section" id="cs-research">
+    <div class="cs-container cs-container--reading">
+
+      <div class="cs-section-header scroll-reveal">
+        <span class="cs-section-num">05</span>
+        <span class="cs-section-name" data-i18n="tb.s05name">Research</span>
+      </div>
+
+      <div class="scroll-reveal">
+        <p data-i18n="tb.s05p1">The research phase helped us identify the main sources of friction in the product selection journey. We analyzed how users accessed the comparator, how they interpreted product information, and what prevented them from confidently choosing a solution.</p>
+        <p data-i18n="tb.s05p2">The findings showed that users valued comparison, but the experience needed to be easier to find, easier to scan, and more focused on decision-making. Customers were not looking for every technical detail upfront; they needed the right information at the right moment.</p>
+        <p data-i18n="tb.s05p3">This shifted the project from a visual redesign into a product evolution focused on reducing uncertainty.</p>
+      </div>
+
+      <div class="cs-insights-grid">
+
+        <div class="cs-insight-card scroll-reveal">
+          <span class="cs-insight-num">01</span>
+          <h3 class="cs-insight-title" data-i18n="tb.s05i1title">Customer Interviews</h3>
+          <p class="cs-insight-desc" data-i18n="tb.s05i1desc">20+ interviews helped us understand how businesses evaluated payment solutions and what information influenced their purchase decision.</p>
+        </div>
+
+        <div class="cs-insight-card scroll-reveal" style="animation-delay:.12s">
+          <span class="cs-insight-num">02</span>
+          <h3 class="cs-insight-title" data-i18n="tb.s05i2title">Usability Testing</h3>
+          <p class="cs-insight-desc" data-i18n="tb.s05i2desc">The first redesigned version was tested against the existing comparator to identify what improved, what created friction, and what needed to change.</p>
+        </div>
+
+        <div class="cs-insight-card scroll-reveal" style="animation-delay:.24s">
+          <span class="cs-insight-num">03</span>
+          <h3 class="cs-insight-title" data-i18n="tb.s05i3title">Behavioral Analysis</h3>
+          <p class="cs-insight-desc" data-i18n="tb.s05i3desc">Analytics and Hotjar helped us review navigation patterns, drop-offs, discoverability issues, and interaction behavior across the product journey.</p>
+        </div>
+
+        <div class="cs-insight-card scroll-reveal" style="animation-delay:.36s">
+          <span class="cs-insight-num">04</span>
+          <h3 class="cs-insight-title" data-i18n="tb.s05i4title">Competitive Benchmark</h3>
+          <p class="cs-insight-desc" data-i18n="tb.s05i4desc">We reviewed comparison patterns from digital products and e-commerce experiences to identify clearer ways of presenting product differences.</p>
+        </div>
+
+      </div>
+
+      <blockquote class="cs-callout scroll-reveal cs-fade-only" style="margin-top:3rem">
+        <p data-i18n="tb.s05callout" data-i18n-html="true">Research revealed that the problem wasn't a lack of information.<br>
+        It was the way information supported decision-making.</p>
+      </blockquote>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SCREEN 06 — KEY INSIGHTS
+       ============================================================ -->
+  <section class="cs-section cs-section--alt" id="cs-insights">
+
+    <div class="cs-container cs-container--reading">
+      <div class="cs-section-header scroll-reveal">
+        <span class="cs-section-num">06</span>
+        <span class="cs-section-name" data-i18n="tb.s06name">Key Insights</span>
+      </div>
+      <h2 class="cs-section-title scroll-reveal" data-i18n="tb.s06title">Our research revealed that the biggest challenge wasn't the amount of information available — it was how that information supported decision-making.</h2>
+      <p class="scroll-reveal" data-i18n="tb.s06intro">Across interviews, usability testing, analytics, and behavioral analysis, five recurring patterns consistently emerged.</p>
+    </div>
+
+    <div class="cs-container">
+      <div class="cs-insights-grid">
+
+        <div class="cs-insight-card scroll-reveal">
+          <span class="cs-insight-num">01</span>
+          <h3 class="cs-insight-title" data-i18n="tb.s06i1title">Finding the comparator was the first challenge.</h3>
+          <p class="cs-insight-desc" data-i18n="tb.s06i1desc">Many users didn't know a comparison tool existed or struggled to find it within the website.</p>
+          <p class="cs-insight-implication" data-i18n="tb.s06i1impl" data-i18n-html="true"><span>Design implication</span> — Increase discoverability by integrating the comparator into key navigation points and product journeys.</p>
+        </div>
+
+        <div class="cs-insight-card scroll-reveal" style="animation-delay:.12s">
+          <span class="cs-insight-num">02</span>
+          <h3 class="cs-insight-title" data-i18n="tb.s06i2title">More information didn't create better decisions.</h3>
+          <p class="cs-insight-desc" data-i18n="tb.s06i2desc">Users appreciated detailed specifications, but too much technical information increased cognitive load and slowed decision-making.</p>
+          <p class="cs-insight-implication" data-i18n="tb.s06i2impl" data-i18n-html="true"><span>Design implication</span> — Prioritize essential information first and progressively disclose technical details only when needed.</p>
+        </div>
+
+        <div class="cs-insight-card scroll-reveal" style="animation-delay:.24s">
+          <span class="cs-insight-num">03</span>
+          <h3 class="cs-insight-title" data-i18n="tb.s06i3title">Customers thought in business needs, not product names.</h3>
+          <p class="cs-insight-desc" data-i18n="tb.s06i3desc">Businesses described what they wanted to achieve instead of searching for a specific payment terminal.</p>
+          <p class="cs-insight-implication" data-i18n="tb.s06i3impl" data-i18n-html="true"><span>Design implication</span> — Organize the experience around customer scenarios rather than a flat product catalog.</p>
+        </div>
+
+        <div class="cs-insight-card scroll-reveal" style="animation-delay:.36s">
+          <span class="cs-insight-num">04</span>
+          <h3 class="cs-insight-title" data-i18n="tb.s06i4title">Comparing products required unnecessary effort.</h3>
+          <p class="cs-insight-desc" data-i18n="tb.s06i4desc">Important information was distributed across multiple pages, forcing users to remember details while switching between products.</p>
+          <p class="cs-insight-implication" data-i18n="tb.s06i4impl" data-i18n-html="true"><span>Design implication</span> — Centralize product comparison into a single, consistent experience.</p>
+        </div>
+
+        <div class="cs-insight-card scroll-reveal" style="animation-delay:.48s">
+          <span class="cs-insight-num">05</span>
+          <h3 class="cs-insight-title" data-i18n="tb.s06i5title">Confidence mattered more than completeness.</h3>
+          <p class="cs-insight-desc" data-i18n="tb.s06i5desc">Users weren't looking to become product experts — they simply wanted enough information to feel confident choosing the right solution.</p>
+          <p class="cs-insight-implication" data-i18n="tb.s06i5impl" data-i18n-html="true"><span>Design implication</span> — Design for confident decision-making instead of information density.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="cs-container cs-container--reading">
+      <blockquote class="cs-callout scroll-reveal cs-fade-only" style="margin-top:3rem">
+        <p data-i18n="tb.s06callout" data-i18n-html="true">Research fundamentally changed our perspective.<br>
+        The goal was no longer to help users compare products.<br>
+        The goal became helping businesses make confident decisions.</p>
+      </blockquote>
+    </div>
+
+  </section>
+
+
+  <!-- ============================================================
+       SCREEN 07 — DESIGN PRINCIPLES
+       ============================================================ -->
+  <section class="cs-section" id="cs-design-principles">
+
+    <div class="cs-container cs-container--reading">
+      <div class="cs-section-header scroll-reveal">
+        <span class="cs-section-num">07</span>
+        <span class="cs-section-name" data-i18n="tb.s07name">Design Principles</span>
+      </div>
+      <p class="scroll-reveal" data-i18n="tb.s07intro">The research findings were translated into a set of design principles that guided every iteration of the Product Comparator. These principles helped the team make consistent design decisions throughout the project.</p>
+    </div>
+
+    <div class="cs-container">
+      <div class="cs-insights-grid">
+
+        <div class="cs-insight-card scroll-reveal">
+          <span class="cs-insight-num">01</span>
+          <h3 class="cs-insight-title" data-i18n="tb.s07p1title">Design for Decisions</h3>
+          <p class="cs-insight-desc" data-i18n="tb.s07p1desc">Every screen should help users choose the right payment solution — not simply present information.</p>
+        </div>
+
+        <div class="cs-insight-card scroll-reveal" style="animation-delay:.12s">
+          <span class="cs-insight-num">02</span>
+          <h3 class="cs-insight-title" data-i18n="tb.s07p2title">Reduce Cognitive Load</h3>
+          <p class="cs-insight-desc" data-i18n="tb.s07p2desc">Prioritize the most relevant information first and progressively reveal technical details only when necessary.</p>
+        </div>
+
+        <div class="cs-insight-card scroll-reveal" style="animation-delay:.24s">
+          <span class="cs-insight-num">03</span>
+          <h3 class="cs-insight-title" data-i18n="tb.s07p3title">Compare with Confidence</h3>
+          <p class="cs-insight-desc" data-i18n="tb.s07p3desc">Enable users to evaluate products side by side using clear, consistent criteria.</p>
+        </div>
+
+        <div class="cs-insight-card scroll-reveal" style="animation-delay:.36s">
+          <span class="cs-insight-num">04</span>
+          <h3 class="cs-insight-title" data-i18n="tb.s07p4title">Support Every Stage of the Journey</h3>
+          <p class="cs-insight-desc" data-i18n="tb.s07p4desc">Whether users were exploring products for the first time or comparing their final options, the experience should provide the right level of guidance.</p>
+        </div>
+
+        <div class="cs-insight-card scroll-reveal" style="animation-delay:.48s">
+          <span class="cs-insight-num">05</span>
+          <h3 class="cs-insight-title" data-i18n="tb.s07p5title">Balance User Needs and Business Goals</h3>
+          <p class="cs-insight-desc" data-i18n="tb.s07p5desc">Every design decision should improve customer confidence while supporting product discoverability and commercial objectives.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="cs-container cs-container--reading">
+      <blockquote class="cs-callout scroll-reveal cs-fade-only" style="margin-top:3rem">
+        <p data-i18n="tb.s07callout">These principles became the foundation for every iteration, allowing the Product Comparator to evolve from an information-heavy catalog into a guided decision-making experience.</p>
+      </blockquote>
+    </div>
+
+  </section>
+
+
+
+
+  <!-- ============================================================
+       SCREEN 08 — PRODUCT EVOLUTION
+       ============================================================ -->
+  <section class="cs-section cs-section--alt" id="cs-evolution">
+
+    <div class="cs-container cs-container--reading">
+      <div class="cs-section-header scroll-reveal">
+        <span class="cs-section-num">08</span>
+        <span class="cs-section-name" data-i18n="tb.s08name">Product Evolution</span>
+      </div>
+      <p class="scroll-reveal" data-i18n="tb.s08intro">Rather than delivering a single redesign, the Product Comparator evolved through multiple iterations. Each version responded to research findings, usability testing, and business feedback, gradually shifting the experience from an information-heavy comparison tool into a guided decision-making product.</p>
+    </div>
+
+    <div class="cs-container scroll-reveal">
+      <div class="cs-before-after">
+
+        <div class="cs-evolution-panel">
+          <div class="cs-evolution-label cs-evolution-label--before" data-i18n="tb.s08v1label">First Iteration</div>
+          <img
+            src="../assets/case-studies/product-comparator/v1.png"
+            alt="Product Comparator V1 — Technical Comparison"
+            class="cs-evolution-img"
+          >
+          <p class="cs-body-text" style="margin-top:1rem;" data-i18n="tb.s08v1desc" data-i18n-html="true"><strong>Technical Comparison.</strong> The first version focused on presenting complete technical specifications in a traditional comparison table. While comprehensive, users needed to scan large amounts of information before identifying the most suitable payment solution.</p>
+        </div>
+
+        <div class="cs-evolution-panel">
+          <div class="cs-evolution-label cs-evolution-label--before" data-i18n="tb.s08v2label">Second Iteration</div>
+          <img
+            src="../assets/case-studies/product-comparator/v2.jpg"
+            alt="Product Comparator V2 — Product Discovery"
+            class="cs-evolution-img"
+          >
+          <p class="cs-body-text" style="margin-top:1rem;" data-i18n="tb.s08v2desc" data-i18n-html="true"><strong>Product Discovery.</strong> The second iteration introduced product cards and improved visual hierarchy, making exploration easier while reducing the initial complexity of the comparison experience.</p>
+        </div>
+
+        <div class="cs-evolution-panel">
+          <div class="cs-evolution-label cs-evolution-label--after" data-i18n="tb.s08v3label">Final Iteration</div>
+          <img
+            src="../assets/case-studies/product-comparator/v3.jpg"
+            alt="Product Comparator V3 — Decision-Focused Experience"
+            class="cs-evolution-img"
+          >
+          <p class="cs-body-text" style="margin-top:1rem;" data-i18n="tb.s08v3desc" data-i18n-html="true"><strong>Decision-Focused Experience.</strong> The final redesign prioritized decision-making by surfacing only the most relevant information first, while keeping detailed specifications accessible when users needed them.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="cs-container cs-container--reading">
+      <blockquote class="cs-callout scroll-reveal cs-fade-only" style="margin-top:3rem">
+        <p data-i18n="tb.s08callout" data-i18n-html="true">Each iteration answered a different question.<br>
+        Version 1 proved comparison was valuable.<br>
+        Version 2 showed where complexity appeared.<br>
+        Version 3 transformed those learnings into a simpler, more effective product experience.</p>
+      </blockquote>
+    </div>
+
+  </section>
+
+
+  <!-- ============================================================
+       SCREEN 09 — RESULTS
+       ============================================================ -->
+  <section class="cs-section" id="cs-results">
+
+    <div class="cs-container cs-container--reading">
+      <div class="cs-section-header scroll-reveal">
+        <span class="cs-section-num">09</span>
+        <span class="cs-section-name" data-i18n="tb.s09name">Results</span>
+      </div>
+      <h2 class="cs-section-title scroll-reveal" data-i18n="tb.s09title">The redesign delivered measurable improvements for both the business and its customers.</h2>
+      <div class="scroll-reveal cs-fade-only">
+        <p data-i18n="tb.s09intro">By simplifying the comparison experience and focusing on decision-making, the Product Comparator became easier to discover, easier to understand, and more effective at supporting product selection.</p>
+      </div>
+    </div>
+
+    <div class="cs-container scroll-reveal cs-fade-only">
+      <div class="cs-stats-row">
+
+        <div class="cs-stat">
+          <span class="cs-stat-number">+11.5%</span>
+          <i class="bi bi-graph-up-arrow cs-stat-icon" aria-hidden="true"></i>
+          <span class="cs-stat-label" data-i18n="tb.s09stat1">Estimated increase in conversion rate</span>
+        </div>
+
+        <div class="cs-stat">
+          <span class="cs-stat-number">60%</span>
+          <i class="bi bi-eye cs-stat-icon" aria-hidden="true"></i>
+          <span class="cs-stat-label" data-i18n="tb.s09stat2">Better product discoverability across the website</span>
+        </div>
+
+        <div class="cs-stat">
+          <span class="cs-stat-number">3×</span>
+          <i class="bi bi-bar-chart-line cs-stat-icon" aria-hidden="true"></i>
+          <span class="cs-stat-label" data-i18n="tb.s09stat3">Increase in engagement with the Product Comparator</span>
+        </div>
+
+        <div class="cs-stat">
+          <span class="cs-stat-number" data-i18n="tb.s09stat4title">Scalable</span>
+          <i class="bi bi-layers cs-stat-icon" aria-hidden="true"></i>
+          <span class="cs-stat-label" data-i18n="tb.s09stat4">Comparison framework for future product launches</span>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="cs-container">
+      <div class="cs-insights-grid scroll-reveal cs-fade-only" style="margin-top:3rem">
+
+        <div class="cs-insight-card cs-insight-card--icon-left">
+          <div class="cs-outcome-icon" aria-hidden="true">
+            <i class="bi bi-clock"></i>
+          </div>
+          <div class="cs-outcome-text">
+            <h3 class="cs-insight-title" data-i18n="tb.s09o1title">Faster Product Evaluation</h3>
+            <p class="cs-insight-desc" data-i18n="tb.s09o1desc">Businesses could assess and compare payment solutions more quickly than before.</p>
+          </div>
+        </div>
+
+        <div class="cs-insight-card cs-insight-card--icon-left">
+          <div class="cs-outcome-icon" aria-hidden="true">
+            <i class="bi bi-lightbulb"></i>
+          </div>
+          <div class="cs-outcome-text">
+            <h3 class="cs-insight-title" data-i18n="tb.s09o2title">Reduced Cognitive Load</h3>
+            <p class="cs-insight-desc" data-i18n="tb.s09o2desc">Simplified presentation reduced mental effort during the comparison process.</p>
+          </div>
+        </div>
+
+        <div class="cs-insight-card cs-insight-card--icon-left">
+          <div class="cs-outcome-icon" aria-hidden="true">
+            <i class="bi bi-shield-check"></i>
+          </div>
+          <div class="cs-outcome-text">
+            <h3 class="cs-insight-title" data-i18n="tb.s09o3title">Greater Confidence</h3>
+            <p class="cs-insight-desc" data-i18n="tb.s09o3desc">Users felt more assured when choosing the right payment solution for their business.</p>
+          </div>
+        </div>
+
+        <div class="cs-insight-card cs-insight-card--icon-left">
+          <div class="cs-outcome-icon" aria-hidden="true">
+            <i class="bi bi-signpost"></i>
+          </div>
+          <div class="cs-outcome-text">
+            <h3 class="cs-insight-title" data-i18n="tb.s09o4title">Simpler Navigation</h3>
+            <p class="cs-insight-desc" data-i18n="tb.s09o4desc">Fewer unnecessary steps between discovery and decision reduced friction across the journey.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="cs-container cs-container--reading">
+      <blockquote class="cs-callout scroll-reveal cs-fade-only" style="margin-top:3rem">
+        <p data-i18n="tb.s09callout">The project demonstrated that improving decision-making was more valuable than simply providing more information. By reducing uncertainty, we created a better experience for users while supporting Transbank's commercial objectives.</p>
+      </blockquote>
+    </div>
+
+  </section>
+
+
+
+
+  <!-- ============================================================
+       SCREEN 10 — FINAL DELIVERABLE
+       ============================================================ -->
+  <section class="cs-section cs-section--alt" id="cs-final">
+    <div class="cs-container cs-container--reading">
+
+      <div class="cs-section-header scroll-reveal">
+        <span class="cs-section-num">10</span>
+        <span class="cs-section-name" data-i18n="tb.s10name">Final Deliverable</span>
+      </div>
+
+      <h2 class="cs-section-title scroll-reveal" data-i18n="tb.s10title">Final Product</h2>
+
+      <div class="scroll-reveal">
+        <p data-i18n="tb.s10desc">The final Product Comparator experience consolidated multiple research findings, usability improvements and business goals into a decision-focused experience that helps businesses compare payment solutions faster and with greater confidence.</p>
+      </div>
+
+    </div>
+
+    <div class="cs-container scroll-reveal cs-fade-only">
+      <div class="cs-figma-embed">
+        <iframe
+          src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FHh6WHuEXeGRk0eUdKDDukj%2FExp.-Comparador%3Fnode-id%3D2894-6048%26t%3DkSxkDYG1xq5nZaGC-1%26hide-ui%3D1"
+          allowfullscreen
+          title="Product Comparator — Interactive Prototype"
+          loading="lazy"
+        ></iframe>
+      </div>
+      <div style="margin-top:2rem;">
+        <a
+          href="https://www.figma.com/proto/Hh6WHuEXeGRk0eUdKDDukj/Exp.-Comparador?node-id=2894-6048&t=kSxkDYG1xq5nZaGC-1"
+          class="btn-case-study btn-case-study--ext"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span data-i18n="tb.s10cta" data-i18n-html="true">View Interactive Prototype <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SCREEN 11 — IMPACT & LEARNINGS
+       ============================================================ -->
+  <section class="cs-section" id="cs-impact">
+
+    <div class="cs-container cs-container--reading">
+      <div class="cs-section-header scroll-reveal">
+        <span class="cs-section-num">11</span>
+        <span class="cs-section-name" data-i18n="tb.s11name">Impact &amp; Learnings</span>
+      </div>
+      <h2 class="cs-section-title scroll-reveal" data-i18n="tb.s11title">What changed</h2>
+      <div class="scroll-reveal cs-fade-only">
+        <p data-i18n="tb.s11intro">The redesign helped reposition the Product Comparator as a decision-support tool, improving how businesses discover, compare and choose Transbank payment solutions.</p>
+      </div>
+    </div>
+
+    <div class="cs-container scroll-reveal cs-fade-only">
+      <div class="cs-impact-learnings-grid">
+
+        <!-- Impact -->
+        <div class="cs-impact-learnings-col">
+          <p class="cs-impact-learnings-heading" data-i18n="tb.s11impactLabel">Impact</p>
+          <div class="cs-impact-cards">
+
+            <div class="cs-lesson-card">
+              <div class="cs-lesson-icon" aria-hidden="true"><i class="bi bi-briefcase"></i></div>
+              <h3 class="cs-lesson-title" data-i18n="tb.s11i1title">Business</h3>
+              <p class="cs-lesson-desc" data-i18n="tb.s11i1desc">Created a scalable comparison framework for future product launches.</p>
+            </div>
+
+            <div class="cs-lesson-card">
+              <div class="cs-lesson-icon" aria-hidden="true"><i class="bi bi-people"></i></div>
+              <h3 class="cs-lesson-title" data-i18n="tb.s11i2title">Customers</h3>
+              <p class="cs-lesson-desc" data-i18n="tb.s11i2desc">Reduced uncertainty by making payment solutions easier to understand and compare.</p>
+            </div>
+
+            <div class="cs-lesson-card">
+              <div class="cs-lesson-icon" aria-hidden="true"><i class="bi bi-vector-pen"></i></div>
+              <h3 class="cs-lesson-title" data-i18n="tb.s11i3title">Design</h3>
+              <p class="cs-lesson-desc" data-i18n="tb.s11i3desc">Shifted the experience from information-heavy comparison to decision-first product design.</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Learnings -->
+        <div class="cs-impact-learnings-col">
+          <p class="cs-impact-learnings-heading" data-i18n="tb.s11learningsLabel">Learnings</p>
+          <div class="cs-impact-cards">
+
+            <div class="cs-lesson-card">
+              <div class="cs-lesson-icon" aria-hidden="true"><i class="bi bi-compass"></i></div>
+              <h3 class="cs-lesson-title" data-i18n="tb.s11l1title">Research drives better decisions.</h3>
+              <p class="cs-lesson-desc" data-i18n="tb.s11l1desc">Early user research helped the team focus on real customer barriers instead of assumptions.</p>
+            </div>
+
+            <div class="cs-lesson-card">
+              <div class="cs-lesson-icon" aria-hidden="true"><i class="bi bi-arrow-repeat"></i></div>
+              <h3 class="cs-lesson-title" data-i18n="tb.s11l2title">Iteration creates stronger products.</h3>
+              <p class="cs-lesson-desc" data-i18n="tb.s11l2desc">Each version revealed new opportunities to simplify the experience.</p>
+            </div>
+
+            <div class="cs-lesson-card">
+              <div class="cs-lesson-icon" aria-hidden="true"><i class="bi bi-lightbulb"></i></div>
+              <h3 class="cs-lesson-title" data-i18n="tb.s11l3title">Clarity beats completeness.</h3>
+              <p class="cs-lesson-desc" data-i18n="tb.s11l3desc">The most valuable solution was not showing more information, but helping users make better decisions with less effort.</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="cs-container cs-container--reading">
+      <blockquote class="cs-callout scroll-reveal cs-fade-only" style="margin-top:3rem">
+        <p data-i18n="tb.s11callout">The biggest takeaway: great product experiences are built through research, collaboration and continuous refinement.</p>
+      </blockquote>
+    </div>
+
+  </section>
+
+
+  <!-- ============================================================
+       SCREEN 14 — NEXT PROJECT
+       Editorial preview — big title, small CTA
+       ============================================================ -->
+  <section class="cs-next" id="cs-next">
+    <div class="cs-container cs-container--reading">
+
+      <span class="cs-next-label scroll-reveal cs-fade-only" data-i18n="cs.nextProject">Next Project</span>
+
+      <div class="cs-next-preview scroll-reveal">
+        <!-- [CONTENT] Replace title and description with the next real case study.
+             Update the href on cs-next-cta to point to the next page.
+             The title can span 2 lines — it should feel large and editorial. -->
+        <h2 class="cs-next-project-title" data-i18n="tb.nextTitle">Help Center Optimization</h2>
+        <p class="cs-next-project-desc" data-i18n="tb.nextDesc">Improving self-service through search, content strategy and user-centered support journeys.</p>
+        <a href="#" class="cs-next-cta" data-i18n="tb.nextCta" data-i18n-html="true">
+          Explore Case <i class="bi bi-arrow-right" aria-hidden="true"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <span class="footer-brand">NM<span class="accent-dot">.</span></span>
+          <span class="footer-copy" data-i18n="footer.copy">Designed & built by Nicolás Mora</span>
+        </div>
+        <div class="col-md-6 text-md-end mt-3 mt-md-0">
+          <a href="#cs-top" class="footer-link" data-i18n="footer.top" data-i18n-html="true">Back to top <i class="bi bi-arrow-up-short"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/i18n.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/case-study.js"></script>
+</body>
+</html>
