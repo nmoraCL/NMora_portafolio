@@ -675,6 +675,182 @@
   display: block;
 }
 
+/* Wide reference visuals (flow diagrams, screen showcases) — full width, no crop */
+.cs-wide-media {
+  width: 100%;
+  margin-top: 3.5rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  overflow: auto;
+  background: var(--bg-surface);
+}
+
+.cs-wide-media img {
+  display: block;
+  width: 100%;
+  min-width: 640px;
+  height: auto;
+}
+
+/* ============================================================
+   ZOOM/PAN BOARD — interactive PNG viewer (Figma-embed replacement)
+   Same frame treatment as .cs-figma-embed: 16:9, rounded, bordered
+   ============================================================ */
+.cs-board {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-surface);
+  margin-top: 4rem;
+}
+
+.cs-board-viewport {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  cursor: grab;
+  touch-action: none;
+  outline: none;
+}
+
+.cs-board-viewport:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+.cs-board-viewport.is-grabbing {
+  cursor: grabbing;
+}
+
+.cs-board-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: 0 0;
+  max-width: none;
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+.cs-board-controls {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: .375rem;
+  padding: .3125rem;
+  background: rgba(10, 10, 11, .7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+}
+
+.cs-board-btn {
+  width: 2rem;
+  height: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-size: .875rem;
+  line-height: 1;
+  transition: color var(--duration-fast) var(--ease-out),
+              background var(--duration-fast) var(--ease-out);
+}
+
+.cs-board-btn:hover {
+  color: var(--text-primary);
+  background: var(--accent-subtle);
+}
+
+.cs-board-hint {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  z-index: 3;
+  font-size: .75rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: rgba(10, 10, 11, .7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--border-subtle);
+  padding: .4375rem .75rem;
+  border-radius: var(--radius-sm);
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity var(--duration-normal) var(--ease-out);
+}
+
+.cs-board-hint.is-hidden {
+  opacity: 0;
+}
+
+@media (max-width: 575.98px) {
+  .cs-board-hint {
+    display: none;
+  }
+}
+
+/* ============================================================
+   CASE STUDY PAGER — compact prev/next navigation
+   Reusable across every case study; update hrefs only
+   ============================================================ */
+.cs-pager {
+  padding: 1.125rem 0;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.cs-pager-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.cs-pager-link {
+  font-size: .875rem;
+  font-weight: 600;
+  color: var(--text-accent);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: .375rem;
+  letter-spacing: .01em;
+  padding: .5rem .875rem;
+  margin: 0 -.875rem;
+  border-radius: var(--radius-md);
+  transition: color var(--duration-fast) var(--ease-out),
+              background var(--duration-fast) var(--ease-out);
+}
+
+a.cs-pager-link:hover {
+  color: var(--accent-hover);
+  background: var(--accent-subtle);
+}
+
+a.cs-pager-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.cs-pager-link.is-disabled {
+  color: var(--text-accent);
+  opacity: .35;
+  pointer-events: none;
+}
+
 /* ============================================================
    SCREEN 10 — DECISION LOG
    ============================================================ */
@@ -797,78 +973,6 @@
 }
 
 /* ============================================================
-   SCREEN 14 — NEXT PROJECT
-   Editorial preview — big title, small CTA
-   ============================================================ */
-.cs-next {
-  padding: var(--section-py) 0;
-  border-top: 1px solid var(--border-subtle);
-}
-
-.cs-next-label {
-  display: block;
-  font-size: .8125rem;
-  font-weight: 700;
-  color: var(--text-accent);
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  margin-bottom: 2.5rem;
-}
-
-.cs-next-preview {
-  /* Nothing — flow layout */
-}
-
-/* Large editorial title for the next project name */
-.cs-next-project-title {
-  font-family: var(--font-display);
-  font-size: clamp(2.75rem, 6.5vw, 5.5rem);
-  font-weight: 800;
-  color: var(--text-primary);
-  letter-spacing: -.04em;
-  line-height: 1.02;
-  margin-bottom: .875rem;
-  transition: color var(--duration-fast) var(--ease-out);
-}
-
-/* Subtitle / description */
-.cs-next-project-desc {
-  font-size: clamp(.9375rem, 1.25vw, 1.0625rem);
-  color: var(--text-secondary);
-  line-height: 1.65;
-  margin-bottom: 2.75rem;
-  max-width: 36rem;
-}
-
-/* CTA link — small, accent-colored */
-.cs-next-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: .5rem;
-  font-size: .9375rem;
-  font-weight: 600;
-  color: var(--text-accent);
-  text-decoration: none;
-  letter-spacing: .01em;
-  transition: gap var(--duration-normal) var(--ease-out),
-              color var(--duration-fast) var(--ease-out);
-}
-
-.cs-next-cta:hover {
-  color: var(--accent-hover);
-  gap: .875rem;
-}
-
-.cs-next-cta i {
-  font-size: 1rem;
-  transition: transform var(--duration-normal) var(--ease-out);
-}
-
-.cs-next-cta:hover i {
-  transform: translateX(4px);
-}
-
-/* ============================================================
    RESPONSIVE
    ============================================================ */
 
@@ -913,10 +1017,6 @@
 
   .cs-lessons-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .cs-next-project-title {
-    font-size: clamp(2.25rem, 5vw, 4rem);
   }
 }
 

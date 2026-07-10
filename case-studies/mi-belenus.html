@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mi Belenus — Belenus Clinic · UX Case Study by Nicolás Mora">
+  <meta name="author" content="Nicolás Mora">
+  <meta name="theme-color" content="#0a0a0b">
+  <title>Mi Belenus — Belenus Clinic · Nicolás Mora</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/case-study.css">
+</head>
+<body>
+
+  <!-- Reading Progress Bar -->
+  <div class="cs-progress-bar" id="csProgressBar" aria-hidden="true"></div>
+
+  <!-- ============ NAVIGATION ============ -->
+  <nav class="navbar navbar-expand-lg fixed-top nav-blur" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand brand-mark" href="../">NM<span class="accent-dot">.</span></a>
+      <button class="navbar-toggler border-0 shadow-none" type="button"
+              data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="../#about"        data-i18n="nav.about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="../#skills"       data-i18n="nav.skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="../#case-studies" data-i18n="nav.caseStudies">Case Studies</a></li>
+          <li class="nav-item"><a class="nav-link" href="../#process"      data-i18n="nav.process">Process</a></li>
+          <li class="nav-item"><a class="nav-link" href="../#experience"   data-i18n="nav.experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="../#contact"      data-i18n="nav.contact">Contact</a></li>
+        </ul>
+        <a href="../#contact" class="btn btn-accent ms-lg-4 d-none d-lg-inline-flex" data-i18n="nav.cta">Let's Talk</a>
+        <div class="lang-switcher" role="group" aria-label="Language selector">
+          <button class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+          <button class="lang-btn" data-lang="es" aria-pressed="false">ES</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ============================================================
+       SCREEN 01 — HERO
+       ============================================================ -->
+  <header class="cs-hero" id="cs-top">
+    <div class="cs-container">
+
+      <!-- Back to Portfolio — subtle breadcrumb at the top of the hero -->
+      <div class="cs-back-nav fade-in">
+        <a href="../" class="cs-back-link" data-i18n="cs.back">← Back to Portfolio</a>
+      </div>
+
+      <!-- ROW 1: two-column content + image -->
+      <div class="cs-hero-row1">
+
+        <div class="cs-hero-content">
+
+          <div class="cs-hero-chips fade-in">
+            <span class="cs-hero-chip" data-i18n="mb.chip1">Case Study 02</span>
+            <span class="cs-hero-chip" data-i18n="mb.chip2">Healthcare / Aesthetic Clinics</span>
+          </div>
+
+          <div class="fade-in" style="animation-delay:.07s">
+            <p class="cs-client-name">Belenus Clinic</p>
+            <h1 class="cs-hero-title" data-i18n="mb.heroTitle">Mi Belenus</h1>
+          </div>
+
+          <p class="cs-hero-logline fade-in" style="animation-delay:.14s" data-i18n="mb.heroLogline">
+            Creating a mobile app that streamlined appointment booking and improved
+            access to aesthetic treatments.
+          </p>
+
+          <p class="cs-hero-summary fade-in" style="animation-delay:.20s" data-i18n="mb.heroSummary">
+            Mi Belenus was designed as a mobile application that centralizes appointment
+            booking, treatment management and customer services into a single digital
+            experience. The project focused on simplifying complex user journeys while
+            creating a scalable foundation for future digital services.
+          </p>
+
+        </div><!-- .cs-hero-content -->
+
+        <div class="cs-hero-visual fade-in" style="animation-delay:.42s">
+          <img
+            src="../assets/case-studies/mi-belenus/hero.png"
+            alt="Mi Belenus — booking, home and calendar screens"
+            class="cs-hero-mockup"
+            draggable="false"
+          >
+        </div>
+
+      </div><!-- .cs-hero-row1 -->
+
+      <!-- ROW 2: full-width metadata bar -->
+      <div class="cs-hero-meta fade-in" style="animation-delay:.28s">
+        <div class="cs-meta-item">
+          <span class="cs-meta-label" data-i18n="cs.metaRole">Role</span>
+          <span class="cs-meta-value" data-i18n="mb.metaRoleVal">UX/UI Designer</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label" data-i18n="cs.metaTimeline">Timeline</span>
+          <span class="cs-meta-value" data-i18n="mb.metaTimelineVal">3 months</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label" data-i18n="cs.metaTeam">Team</span>
+          <span class="cs-meta-value" data-i18n="mb.metaTeamVal">2 UX/UI Designers</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label" data-i18n="cs.metaIndustry">Industry</span>
+          <span class="cs-meta-value" data-i18n="mb.metaIndustryVal">Healthcare / Aesthetic Clinics</span>
+        </div>
+      </div><!-- .cs-hero-meta -->
+
+      <div class="cs-scroll-hint fade-in" style="animation-delay:.35s" aria-hidden="true">
+        <span class="cs-scroll-label" data-i18n="mb.scroll">Scroll</span>
+        <div class="cs-scroll-arrow"><i class="bi bi-arrow-down"></i></div>
+      </div>
+
+    </div><!-- .cs-container -->
+    <div class="cs-hero-bg-glow" aria-hidden="true"></div>
+  </header>
+
+
+  <!-- ============================================================
+       SCREEN 02 — PROJECT AT A GLANCE
+       ============================================================ -->
+  <section class="cs-glance" id="cs-glance">
+    <div class="cs-container">
+
+      <div class="cs-glance-header scroll-reveal">
+        <span class="cs-section-chip" data-i18n="mb.s02chip">02 · At a glance</span>
+      </div>
+
+      <div class="cs-stats-row scroll-reveal">
+
+        <div class="cs-stat">
+          <span class="cs-stat-number" data-i18n="mb.s02stat1title">Problem</span>
+          <span class="cs-stat-label" data-i18n="mb.s02stat1desc">Belenus Clinic managed appointment booking manually through phone calls and WhatsApp, making it difficult for patients to check availability, manage sessions or keep track of gifted treatments.</span>
+        </div>
+
+        <div class="cs-stat">
+          <span class="cs-stat-number" data-i18n="mb.s02stat2title">Objective</span>
+          <span class="cs-stat-label" data-i18n="mb.s02stat2desc">Design a mobile application that let patients book, confirm and manage their treatments independently, while building a scalable foundation for future digital services.</span>
+        </div>
+
+        <div class="cs-stat">
+          <span class="cs-stat-number" data-i18n="mb.s02stat3title">Approach</span>
+          <span class="cs-stat-label" data-i18n="mb.s02stat3desc">Combined stakeholder interviews, end-to-end flow mapping and iterative UI design to turn a fragmented manual process into a guided, self-service mobile experience.</span>
+        </div>
+
+        <div class="cs-stat">
+          <span class="cs-stat-number" data-i18n="mb.s02stat4title">Deliverable</span>
+          <span class="cs-stat-label" data-i18n="mb.s02stat4desc">A complete, development-ready booking application — from onboarding to treatment confirmation — built on a scalable design system.</span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SCREEN 03 — THE CHALLENGE
+       ============================================================ -->
+  <section class="cs-section" id="cs-challenge">
+    <div class="cs-container">
+
+      <div class="cs-section-header scroll-reveal">
+        <span class="cs-section-num">03</span>
+        <span class="cs-section-name" data-i18n="cs.challenge">The Challenge</span>
+      </div>
+
+      <div class="cs-section-media scroll-reveal cs-fade-only">
+        <img
+          src="../assets/case-studies/mi-belenus/challenge.png"
+          alt="Mi Belenus — onboarding welcome screen"
+          class="cs-section-media__img"
+        >
+        <div class="cs-section-media__text">
+          <p data-i18n="mb.s03p1">Belenus Clinic offered laser and aesthetic treatments across multiple locations, but booking a session depended entirely on phone calls or WhatsApp messages handled by clinic staff.</p>
+          <p data-i18n="mb.s03p2">Patients had no way to check real-time availability, confirm or cancel a session, track how many treatments they had left, or gift a session to someone else. Every request added manual work for the clinic team and uncertainty for the patient.</p>
+          <p data-i18n="mb.s03p3">The challenge was to design a mobile application that gave patients full control over their treatments — booking, confirming, tracking and gifting sessions — without adding friction to the clinic's existing operations.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SCREEN 04 — DISCOVERY
+       ============================================================ -->
+  <section class="cs-section cs-section--alt" id="cs-discovery">
+    <div class="cs-container cs-container--reading">
+
+      <div class="cs-section-header scroll-reveal">
+        <span class="cs-section-num">04</span>
+        <span class="cs-section-name" data-i18n="mb.s04name">Discovery</span>
+      </div>
+
+      <div class="scroll-reveal">
+        <p data-i18n="mb.s04p1">Before designing any screen, we needed to understand the full manual booking process — how appointments were requested, confirmed and tracked, and where patients and staff experienced the most friction.</p>
+        <p data-i18n="mb.s04p2">Working closely with Belenus Clinic's team, we mapped the existing booking journey end-to-end and translated it into a detailed wireflow covering every state: onboarding, treatment selection, scheduling, confirmation, cancellation, session history and gifting.</p>
+        <p data-i18n="mb.s04p3">This discovery phase became the backbone of the project — every screen in the final application was traced back to a specific step in that flow.</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SCREEN 05 — RESEARCH
+       ============================================================ -->
+  <section class="cs-section" id="cs-research">
+    <div class="cs-container cs-container--reading">
+
+      <div class="cs-section-header scroll-reveal">
+        <span class="cs-section-num">05</span>
+        <span class="cs-section-name" data-i18n="mb.s05name">Research</span>
+      </div>
+
+      <div class="scroll-reveal">
+        <p data-i18n="mb.s05p1">The research phase focused on translating an informal, person-dependent process into a structured digital flow that patients could follow on their own.</p>
+        <p data-i18n="mb.s05p2">We found that patients didn't need every clinical detail up front — they needed clear next steps: which treatments were available, when, and how to confirm or change a booking without calling the clinic.</p>
+        <p data-i18n="mb.s05p3">This reframed the project from digitizing a form into designing a guided, self-service booking journey.</p>
+      </div>
+
+      <div class="cs-insights-grid">
+
+        <div class="cs-insight-card scroll-reveal">
+          <span class="cs-insight-num">01</span>
+          <h3 class="cs-insight-title" data-i18n="mb.s05i1title">Stakeholder Interviews</h3>
+          <p class="cs-insight-desc" data-i18n="mb.s05i1desc">Sessions with clinic staff and administrators surfaced the most common booking requests, cancellations and exceptions handled manually every day.</p>
+        </div>
+
+        <div class="cs-insight-card scroll-reveal" style="animation-delay:.12s">
+          <span class="cs-insight-num">02</span>
+          <h3 class="cs-insight-title" data-i18n="mb.s05i2title">Flow Mapping</h3>
+          <p class="cs-insight-desc" data-i18n="mb.s05i2desc">We mapped every step of the existing booking process, from first contact to session completion, to identify what could be self-served in-app.</p>
+        </div>
+
+        <div class="cs-insight-card scroll-reveal" style="animation-delay:.24s">
+          <span class="cs-insight-num">03</span>
+          <h3 class="cs-insight-title" data-i18n="mb.s05i3title">Competitive Benchmark</h3>
+          <p class="cs-insight-desc" data-i18n="mb.s05i3desc">We reviewed booking patterns from healthcare and wellness apps to identify familiar, trustworthy interaction models for scheduling and cancellations.</p>
+        </div>
+
+        <div class="cs-insight-card scroll-reveal" style="animation-delay:.36s">
+          <span class="cs-insight-num">04</span>
+          <h3 class="cs-insight-title" data-i18n="mb.s05i4title">Content & Edge Cases</h3>
+          <p class="cs-insight-desc" data-i18n="mb.s05i4desc">We catalogued edge cases — expired sessions, gifted treatments, multi-clinic preferences — that the flow needed to support from day one.</p>
+        </div>
+
+      </div>
+
+      <blockquote class="cs-callout scroll-reveal cs-fade-only" style="margin-top:3rem">
+        <p data-i18n="mb.s05callout" data-i18n-html="true">The real challenge wasn't building a booking form.<br>
+        It was replacing a phone call with a flow patients could trust.</p>
+      </blockquote>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SCREEN 06 — USER FLOW
+       ============================================================ -->
+  <section class="cs-section cs-section--alt" id="cs-flow">
+    <div class="cs-container cs-container--reading">
+
+      <div class="cs-section-header scroll-reveal">
+        <span class="cs-section-num">06</span>
+        <span class="cs-section-name" data-i18n="mb.s06name">User Flow</span>
+      </div>
+
+      <div class="scroll-reveal">
+        <p data-i18n="mb.s06p1">We translated the discovery findings into a complete wireflow covering every path through the application: authentication and registration, treatment booking, confirmation and cancellation, session history, gifting and account management.</p>
+        <p data-i18n="mb.s06p2">Mapping the flow before designing any interface let the team validate edge cases early — like what happens when a session expires, or when a patient wants to gift a treatment to someone who isn't registered yet — without the cost of reworking finished screens.</p>
+        <p data-i18n="mb.s06p3">This flow became the shared reference for design and development throughout the project, keeping every screen traceable back to a specific step in the patient journey.</p>
+      </div>
+    </div>
+
+    <div class="cs-container scroll-reveal cs-fade-only">
+      <div class="cs-board">
+        <div class="cs-board-viewport" role="group" aria-label="Mi Belenus — complete UX wireflow, zoomable and pannable. Use arrow keys to pan, plus and minus to zoom.">
+          <img
+            src="../assets/case-studies/mi-belenus/wireflow-board.jpg"
+            alt="Mi Belenus — complete UX wireflow"
+            class="cs-board-img"
+            draggable="false"
+          >
+        </div>
+        <div class="cs-board-controls">
+          <button type="button" class="cs-board-btn" data-board-zoom-out aria-label="Zoom out"><i class="bi bi-dash-lg"></i></button>
+          <button type="button" class="cs-board-btn" data-board-zoom-reset aria-label="Reset zoom"><i class="bi bi-arrow-counterclockwise"></i></button>
+          <button type="button" class="cs-board-btn" data-board-zoom-in aria-label="Zoom in"><i class="bi bi-plus-lg"></i></button>
+        </div>
+        <span class="cs-board-hint" data-i18n="cs.boardHintDrag">Drag to pan · Use the mouse wheel to zoom</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SCREEN 07 — VISUAL DESIGN
+       ============================================================ -->
+  <section class="cs-section" id="cs-visual-design">
+
+    <div class="cs-container cs-container--reading">
+      <div class="cs-section-header scroll-reveal">
+        <span class="cs-section-num">07</span>
+        <span class="cs-section-name" data-i18n="mb.s07name">Visual Design</span>
+      </div>
+      <p class="scroll-reveal" data-i18n="mb.s07intro">With the flow validated, we defined a visual language built around clarity and trust — an important quality for a healthcare-adjacent product where patients are managing bookings and personal data.</p>
+    </div>
+
+    <div class="cs-container">
+      <div class="cs-insights-grid">
+
+        <div class="cs-insight-card scroll-reveal">
+          <span class="cs-insight-num">01</span>
+          <h3 class="cs-insight-title" data-i18n="mb.s07p1title">Guide, Don't Overwhelm</h3>
+          <p class="cs-insight-desc" data-i18n="mb.s07p1desc">Every screen surfaces one clear next action, keeping treatment and scheduling details progressive rather than upfront.</p>
+        </div>
+
+        <div class="cs-insight-card scroll-reveal" style="animation-delay:.12s">
+          <span class="cs-insight-num">02</span>
+          <h3 class="cs-insight-title" data-i18n="mb.s07p2title">Consistent Patterns</h3>
+          <p class="cs-insight-desc" data-i18n="mb.s07p2desc">Booking, confirming and cancelling all follow the same visual and interaction pattern, so patients only need to learn it once.</p>
+        </div>
+
+        <div class="cs-insight-card scroll-reveal" style="animation-delay:.24s">
+          <span class="cs-insight-num">03</span>
+          <h3 class="cs-insight-title" data-i18n="mb.s07p3title">Built for Trust</h3>
+          <p class="cs-insight-desc" data-i18n="mb.s07p3desc">A calm color palette, clear typography and predictable navigation reinforce confidence in a healthcare context.</p>
+        </div>
+
+        <div class="cs-insight-card scroll-reveal" style="animation-delay:.36s">
+          <span class="cs-insight-num">04</span>
+          <h3 class="cs-insight-title" data-i18n="mb.s07p4title">Ready to Scale</h3>
+          <p class="cs-insight-desc" data-i18n="mb.s07p4desc">Reusable components and a documented color and type system allow the product to grow with new treatments and services.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="cs-container scroll-reveal">
+      <div class="cs-before-after">
+
+        <div class="cs-evolution-panel">
+          <div class="cs-evolution-label cs-evolution-label--before" data-i18n="mb.s07panel1label">Brand & Design System</div>
+          <img
+            src="../assets/case-studies/mi-belenus/visual-palette.png"
+            alt="Mi Belenus — color palette and typography"
+            class="cs-evolution-img"
+          >
+          <p class="cs-body-text" style="margin-top:1rem;" data-i18n="mb.s07panel1desc">The palette pairs a soft rose primary with a deep navy accent, paired with Roboto and Rubik for a calm, trustworthy feel appropriate for a healthcare product.</p>
+        </div>
+
+        <div class="cs-evolution-panel">
+          <div class="cs-evolution-label cs-evolution-label--before" data-i18n="mb.s07panel2label">Onboarding & Access</div>
+          <img
+            src="../assets/case-studies/mi-belenus/visual-onboarding-panel.png"
+            alt="Mi Belenus — onboarding screens"
+            class="cs-evolution-img"
+          >
+          <p class="cs-body-text" style="margin-top:1rem;" data-i18n="mb.s07panel2desc">A short, illustrated onboarding introduces the app's core value — free gifted sessions and always-on access to the clinic — before asking patients to register.</p>
+        </div>
+
+        <div class="cs-evolution-panel">
+          <div class="cs-evolution-label cs-evolution-label--after" data-i18n="mb.s07panel3label">Booking & Scheduling</div>
+          <img
+            src="../assets/case-studies/mi-belenus/visual-booking.png"
+            alt="Mi Belenus — booking and calendar screens"
+            class="cs-evolution-img"
+          >
+          <p class="cs-body-text" style="margin-top:1rem;" data-i18n="mb.s07panel3desc">The booking flow surfaces treatment details and available time slots first, with a calendar view that makes availability immediately clear.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="cs-container cs-container--reading">
+      <blockquote class="cs-callout scroll-reveal cs-fade-only" style="margin-top:3rem">
+        <p data-i18n="mb.s07callout">The visual system had to do two jobs at once: feel as calm and reassuring as the clinic itself, and stay simple enough to scale to every future treatment.</p>
+      </blockquote>
+    </div>
+
+  </section>
+
+
+  <!-- ============================================================
+       SCREEN 08 — PROTOTYPE
+       ============================================================ -->
+  <section class="cs-section cs-section--alt" id="cs-prototype">
+
+    <div class="cs-container cs-container--reading">
+      <div class="cs-section-header scroll-reveal">
+        <span class="cs-section-num">08</span>
+        <span class="cs-section-name" data-i18n="mb.s08name">Prototype</span>
+      </div>
+      <h2 class="cs-section-title scroll-reveal" data-i18n="mb.s08title">A connected, testable experience</h2>
+      <div class="scroll-reveal">
+        <p data-i18n="mb.s08intro">The final prototype connects every screen mapped in the wireflow into a working, testable experience — from onboarding to treatment confirmation.</p>
+      </div>
+    </div>
+
+    <div class="cs-container scroll-reveal cs-fade-only">
+      <div class="cs-board">
+        <div class="cs-board-viewport" role="group" aria-label="Mi Belenus — full UI design board, zoomable and pannable. Use arrow keys to pan, plus and minus to zoom.">
+          <img
+            src="../assets/case-studies/mi-belenus/prototype-board.jpg"
+            alt="Mi Belenus — full UI design board"
+            class="cs-board-img"
+            draggable="false"
+          >
+        </div>
+        <div class="cs-board-controls">
+          <button type="button" class="cs-board-btn" data-board-zoom-out aria-label="Zoom out"><i class="bi bi-dash-lg"></i></button>
+          <button type="button" class="cs-board-btn" data-board-zoom-reset aria-label="Reset zoom"><i class="bi bi-arrow-counterclockwise"></i></button>
+          <button type="button" class="cs-board-btn" data-board-zoom-in aria-label="Zoom in"><i class="bi bi-plus-lg"></i></button>
+        </div>
+        <span class="cs-board-hint" data-i18n="cs.boardHint">Scroll to zoom · Drag to pan</span>
+      </div>
+    </div>
+
+    <div class="cs-container">
+      <div class="cs-insights-grid scroll-reveal cs-fade-only" style="margin-top:3rem">
+
+        <div class="cs-insight-card cs-insight-card--icon-left">
+          <div class="cs-outcome-icon" aria-hidden="true">
+            <i class="bi bi-calendar-check"></i>
+          </div>
+          <div class="cs-outcome-text">
+            <h3 class="cs-insight-title" data-i18n="mb.s08o1title">Self-Service Booking</h3>
+            <p class="cs-insight-desc" data-i18n="mb.s08o1desc">Patients can check availability and confirm a session end-to-end without contacting the clinic.</p>
+          </div>
+        </div>
+
+        <div class="cs-insight-card cs-insight-card--icon-left">
+          <div class="cs-outcome-icon" aria-hidden="true">
+            <i class="bi bi-clock-history"></i>
+          </div>
+          <div class="cs-outcome-text">
+            <h3 class="cs-insight-title" data-i18n="mb.s08o2title">Clear Session Tracking</h3>
+            <p class="cs-insight-desc" data-i18n="mb.s08o2desc">Active, upcoming and expired sessions are always visible, reducing uncertainty about what's left to use.</p>
+          </div>
+        </div>
+
+        <div class="cs-insight-card cs-insight-card--icon-left">
+          <div class="cs-outcome-icon" aria-hidden="true">
+            <i class="bi bi-gift"></i>
+          </div>
+          <div class="cs-outcome-text">
+            <h3 class="cs-insight-title" data-i18n="mb.s08o3title">Built-In Gifting</h3>
+            <p class="cs-insight-desc" data-i18n="mb.s08o3desc">Patients can send a treatment session to someone else directly from the app.</p>
+          </div>
+        </div>
+
+        <div class="cs-insight-card cs-insight-card--icon-left">
+          <div class="cs-outcome-icon" aria-hidden="true">
+            <i class="bi bi-compass"></i>
+          </div>
+          <div class="cs-outcome-text">
+            <h3 class="cs-insight-title" data-i18n="mb.s08o4title">Consistent Navigation</h3>
+            <p class="cs-insight-desc" data-i18n="mb.s08o4desc">A persistent bottom navigation keeps booking, profile, contact and gifting always one tap away.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- ============================================================
+       SCREEN 09 — DELIVERABLES
+       ============================================================ -->
+  <section class="cs-section" id="cs-deliverables">
+
+    <div class="cs-container cs-container--reading">
+      <div class="cs-section-header scroll-reveal">
+        <span class="cs-section-num">09</span>
+        <span class="cs-section-name" data-i18n="mb.s09name">Deliverables</span>
+      </div>
+      <h2 class="cs-section-title scroll-reveal" data-i18n="mb.s09title">A complete, development-ready mobile experience</h2>
+      <div class="scroll-reveal cs-fade-only">
+        <p data-i18n="mb.s09intro">Instead of a single feature, the project shipped as a full patient journey — ready for engineering handoff and built to support future treatments and services.</p>
+      </div>
+    </div>
+
+    <div class="cs-container">
+      <div class="cs-insights-grid scroll-reveal cs-fade-only">
+
+        <div class="cs-insight-card">
+          <span class="cs-insight-num">01</span>
+          <h3 class="cs-insight-title" data-i18n="mb.s09d1title">Complete Booking Flow</h3>
+          <p class="cs-insight-desc" data-i18n="mb.s09d1desc">End-to-end appointment booking — from treatment selection to confirmation — fully mapped and designed for self-service.</p>
+        </div>
+
+        <div class="cs-insight-card">
+          <span class="cs-insight-num">02</span>
+          <h3 class="cs-insight-title" data-i18n="mb.s09d2title">Treatment Management</h3>
+          <p class="cs-insight-desc" data-i18n="mb.s09d2desc">Patients can view, add or remove treatments from a booking before confirming a session.</p>
+        </div>
+
+        <div class="cs-insight-card">
+          <span class="cs-insight-num">03</span>
+          <h3 class="cs-insight-title" data-i18n="mb.s09d3title">Session History</h3>
+          <p class="cs-insight-desc" data-i18n="mb.s09d3desc">A dedicated history view shows completed, upcoming and cancelled sessions at a glance.</p>
+        </div>
+
+        <div class="cs-insight-card">
+          <span class="cs-insight-num">04</span>
+          <h3 class="cs-insight-title" data-i18n="mb.s09d4title">Gift Sessions</h3>
+          <p class="cs-insight-desc" data-i18n="mb.s09d4desc">A built-in flow lets patients send a treatment session to someone else directly from the app.</p>
+        </div>
+
+        <div class="cs-insight-card">
+          <span class="cs-insight-num">05</span>
+          <h3 class="cs-insight-title" data-i18n="mb.s09d5title">Scalable Design Foundation</h3>
+          <p class="cs-insight-desc" data-i18n="mb.s09d5desc">A documented component library and flow architecture ready to support new treatments, clinics and services.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="cs-container cs-container--reading">
+      <blockquote class="cs-callout scroll-reveal cs-fade-only" style="margin-top:3rem">
+        <p data-i18n="mb.s09callout">Instead of a single feature, the project delivered a complete, reusable foundation the clinic can keep building on.</p>
+      </blockquote>
+    </div>
+
+  </section>
+
+
+  <!-- ============================================================
+       SCREEN 10 — LEARNINGS
+       ============================================================ -->
+  <section class="cs-section cs-section--alt" id="cs-learnings">
+
+    <div class="cs-container cs-container--reading">
+      <div class="cs-section-header scroll-reveal">
+        <span class="cs-section-num">10</span>
+        <span class="cs-section-name" data-i18n="mb.s10name">Learnings</span>
+      </div>
+      <h2 class="cs-section-title scroll-reveal" data-i18n="mb.s10title">What we took away</h2>
+      <div class="scroll-reveal cs-fade-only">
+        <p data-i18n="mb.s10intro">Designing Mi Belenus from scratch — with no existing digital product to reference — reshaped how we approached flow, scope and trust.</p>
+      </div>
+    </div>
+
+    <div class="cs-container">
+      <div class="cs-insights-grid scroll-reveal cs-fade-only">
+
+        <div class="cs-insight-card">
+          <span class="cs-insight-num">01</span>
+          <h3 class="cs-insight-title" data-i18n="mb.s10l1title">Map before you design.</h3>
+          <p class="cs-insight-desc" data-i18n="mb.s10l1desc">Documenting the full flow before touching UI prevented costly rework later and kept every screen grounded in a real use case.</p>
+        </div>
+
+        <div class="cs-insight-card">
+          <span class="cs-insight-num">02</span>
+          <h3 class="cs-insight-title" data-i18n="mb.s10l2title">Simplicity builds trust.</h3>
+          <p class="cs-insight-desc" data-i18n="mb.s10l2desc">In a healthcare-adjacent product, reducing steps and surfacing clear next actions mattered more than showing every detail.</p>
+        </div>
+
+        <div class="cs-insight-card">
+          <span class="cs-insight-num">03</span>
+          <h3 class="cs-insight-title" data-i18n="mb.s10l3title">Design for the whole lifecycle.</h3>
+          <p class="cs-insight-desc" data-i18n="mb.s10l3desc">Treatments don't end at booking — planning for session history, expiration and gifting from the start avoided gaps later.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="cs-container cs-container--reading">
+      <blockquote class="cs-callout scroll-reveal cs-fade-only" style="margin-top:3rem">
+        <p data-i18n="mb.s10callout">The biggest takeaway: a booking flow is only as good as the process it replaces — understanding that process was the real design work.</p>
+      </blockquote>
+    </div>
+
+  </section>
+
+
+  <!-- ============================================================
+       CASE STUDY NAVIGATION — reusable across all case studies
+       ============================================================ -->
+  <nav class="cs-pager scroll-reveal cs-fade-only" id="cs-next" aria-label="Case study navigation">
+    <div class="cs-container cs-container--reading cs-pager-inner">
+      <a href="transbank-product-comparator.html" class="cs-pager-link cs-pager-link--prev" data-i18n="cs.pagerPrev">← Previous Project</a>
+      <span class="cs-pager-link cs-pager-link--next is-disabled" aria-disabled="true" data-i18n="cs.pagerNext">Next Project →</span>
+    </div>
+  </nav>
+
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <span class="footer-brand">NM<span class="accent-dot">.</span></span>
+          <span class="footer-copy" data-i18n="footer.copy">Designed & built by Nicolás Mora</span>
+        </div>
+        <div class="col-md-6 text-md-end mt-3 mt-md-0">
+          <a href="#cs-top" class="footer-link" data-i18n="footer.top" data-i18n-html="true">Back to top <i class="bi bi-arrow-up-short"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/i18n.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/case-study.js"></script>
+</body>
+</html>
